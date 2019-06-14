@@ -1,0 +1,3 @@
+create table mem(id int(10) not null auto_increment, memid varchar(100) not null, mname varchar(15) not null, maddress varchar(100) not null, mcontact varchar(10) not null, memail varchar(20) not null, mcity varchar(10) not null, memtyp varchar(15) not null,superviser_name varchar(30) not null,superviser_emailid varchar(30) not null,mdoj   timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, mdeleted varchar(1) default "n",mcount int(10) default 0, primary key(id));
+
+insert into mem values(1,'ATCEMP0001','ADITY BHASKAR','VIKAS VIHAR','9911328263','aditya@gmail.com','Dwarka','Permanent','Aman Malhotra','aman@gmail.com','2008-01-01 00:00:01','n',0);

@@ -1,0 +1,4 @@
+create table books(id int(10) not null auto_increment, bookno varchar(100) not null, bookname varchar(100) not null,author varchar(100) not null, publisher varchar(100) not null, publication_year int(10) not null, language varchar(10) not null,bcategoryid varchar(10) not null,isbn_no varchar(15),qoh int(100) not null,issued int(100) not null default 0,bookprice int(10) not null ,bdeleted varchar(1) default "n", added_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,primary key(id))ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+
+insert into books values(1,'ATCB1','Geeta','Krishna Dev Vashudeva','Geet Press Gorakhpur',1999,'Hindi','Religous','19901910912',100,0,1500,'n','2008-01-01 00:00:01');

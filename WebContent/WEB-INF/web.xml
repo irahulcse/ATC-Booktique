@@ -1,0 +1,19 @@
+    <web-app>  
+      
+    <servlet>  
+    <servlet-name>rahulchandra</servlet-name>  
+    <jsp-file>/welcome.jsp</jsp-file>  
+      
+    <init-param>  
+    <param-name>dname</param-name>  
+    <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>  
+    </init-param>  
+      
+    </servlet>  
+      
+    <servlet-mapping>  
+    <servlet-name>rahulchandra</servlet-name>  
+    <url-pattern>/welcome</url-pattern>  
+    </servlet-mapping>  
+      
+    </web-app>  
