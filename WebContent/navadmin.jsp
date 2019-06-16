@@ -37,11 +37,11 @@
     <div class="navbar-header"> 
       <a class="navbar-brand" href="navadmin.jsp"><b>Online Library System</b></a>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
                 <li><a href="navadmin.jsp"><b>LOGOUT</b></a></li>
        </ul>
-   <div>
+   <div> -->
    
    </div>
     </div><!-- /.navbar-collapse -->
@@ -60,19 +60,19 @@
     <td><button class="button">B</button>
     </td>
 </table> -->
-   <button class="button" width:>LIBRARIAN PORTAL</style></button>
+   <button class="button" style="width:350px">LIBRARIAN PORTAL</style></button>
 	</form>  
 	<br>
 	<form action="MemApplication.jsp">
-   <button class="button button4">MEMBER PORTAL</button>
+   <button class="button button4" style="width:350px">MEMBER PORTAL</button>
 	</form> 
 	<br>
 	<form action="BookApplication.jsp">
-   <button class="button button5">BOOKS PORTAL</button>
+   <button class="button button5" style="width:350px">BOOKS PORTAL</button>
 	</form> 
 	<br>
 	<form action="TransApplication.jsp">
- 	   <button class="button button3">TRANSACTION PORTAL</button>
+ 	   <button class="button button3" style="width:360px">TRANSACTION PORTAL</button>
 	</form> 
   </div>
 </div>
