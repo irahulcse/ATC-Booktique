@@ -7,6 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="bootstrap.min.css"/>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style type="text/css">body { background:  white !important; }
 .button {
   background-color: #008CBA; /* Green */
@@ -42,138 +47,29 @@
 .button4 {background-color: #800080;} /* Gray */ 
 .button5 {background-color: #8000ff;} /* Black */
 .button6{padding: 30px 100px;background-color: #8000ff;}
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 35%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
 
 </style>
 
 </head>
 <body>
+
 <div class="jumbotron text-center" style="background-color: powderblue;height:150px;margin-bottom:0;">
-  <h2 ><b>American Tower Corporation</b></h2>
+  <h2 ><strong><img src="ATClogo.PNG" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
 </div>
+
+
 <nav class="navbar navbar-inverse">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header"> 
       <a class="navbar-brand" href="index.jsp"><b>Online Library System</b></a>
     </div>
+    </div>
 </nav>
-
 
 <div class="row-md-3">
   <div class="col-md-6">
-  <h3><b>LIBRARIAN LOGIN</h3>
+  <h3><b>LIBRARIAN LOGIN</b></h3>
    <form action="LibrarianPassCheck.jsp" method="post" style="width:300px">
   <div class="form-group">
     <label for="email1">Employee Id</label>
@@ -186,15 +82,44 @@
   <div class="form-group">
   </div>
   <button type="submit" class="btn btn-primary">Login</button>
-  <button id="myBtn" class="btn btn-primary">Forget Password!</button>
-  <br><br><br><p><font color="red">The default password for the First Time User is===rahul</font></p>
-  <div style="float: right; width:140px;">
-</div>
-</form>
+   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Forget Password</button>
+  </form>
+  
+
+  <!-- Librarian's Modal Box which can be used to find all the details about the project and it's usages -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" align="center"><strong>FORGET PASSWORD LIBRARIAN!</strong></h4>
+        </div>
+        <form action="changePasswordLibrarian.jsp" method="post">
+        <div class="modal-body">
+          
+			<table class='table table-bordered table-striped' border="1" style="margin-left:auto;margin-right:auto;">
+				<tr><td>Librarian Id<font color="red">*</font></td><td><input type="text" name="libid" required></td></tr>
+				<tr><td>Current Password<font color="red">*</font></td><td><input type="password" name="current" required ></td></tr>
+				<tr><td>New Password<font color="red">*</font></td><td><input type="password" name="new" required></td></tr>
+				<tr><td>Confirm Password<font color="red">*</font></td><td><input type="password" name="confirm" required></td></tr>
+			</table>
+        </div>
+        <div class="modal-footer">
+        	<input type="submit" value="Change Password" class="btn btn-primary">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </form>
+      </div>
+      
+    </div>
   </div>
   
+</div>
+   
   
-  <div class="col-md-6">
+<div class="col-md-6">
   <h3 ><b>ADMIN LOGIN</b></h3>
   <form action="AdminPassCheck.jsp" method="post" style="width:300px">
   <div class="form-group">
@@ -206,13 +131,43 @@
     <input type="password" class="form-control" name="password1" placeholder="Password"/>
   </div>  
   <button type="submit" class="btn btn-primary">Login</button>
-  <button id="myBtn" class="btn btn-primary">Forget Password!</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Forget Password</button>
 </form>
-</div>
+
+<!-- Admin's Modal Box! Pls have a look to it for all the entities -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" align="center"><strong>FORGET PASSWORD ADMIN!</strong></h4>
+        </div>
+        <form action="changePasswordAdmin.jsp" method="post">
+        <div class="modal-body">
+          
+			<table class='table table-bordered table-striped' border="1" style="margin-left:auto;margin-right:auto;">
+				<tr><td>Admin's Id<font color="red">*</font></td><td><input type="text" name="Uid" ></td></tr>
+				<tr><td>Current Password<font color="red">*</font></td><td><input type="password" name="Password"  ></td></tr>
+				<tr><td>New Password<font color="red">*</font></td><td><input type="password" name="new" ></td></tr>
+				<tr><td>Confirm Password<font color="red">*</font></td><td><input type="password" name="confirm" ></td></tr>
+			</table>
+        </div>
+        <div class="modal-footer">
+        	<input type="submit" value="Change Password" class="btn btn-primary">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </form>
+      </div>
+      
+    </div>
   </div>
+  
+  
+</div>
 
-
-
+</div>
 
 
 <jsp:include page="navfooter.jsp" />
