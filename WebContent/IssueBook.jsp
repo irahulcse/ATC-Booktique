@@ -1,5 +1,4 @@
 
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@page language="java"%>
 <%@page import="java.sql.*"%>
@@ -53,30 +52,22 @@ body { background:  white !important; }
     });
   </script>
   <script>
-function deleteRecord2(id){
-    var f=document.form;
-    f.method="post";
-    f.action='AddLibrarian.jsp?id1='+id;
-    f.submit();
-}
-function deleteRecord(id){
-    var f=document.form;
-    f.method="post";
-    f.action='AddLibrarian.jsp?id='+id;
-    f.submit();
-}
 function myFunction() {
   window.print();
 }
 
 </script>
+
+
+<!-- The below line of code are used to stop the user from going to the previous page back -->
 <script type="text/javascript" >
    function preventBack(){window.history.forward();}
     setTimeout("preventBack()", 0);
     window.onunload=function(){null};
 </script>  
-
 </head>
+
+
 <body>
 <font color="WHITE"><marquee direction="left" scrollamount="10" style="background:RED">After issuing, pls don't redirect back and confirm the issue message. Otherwise it will again issue the same book to same author. </marquee></font>
 <form class="form-inline" method="get" action="IssuedBook.jsp" onsubmit="return confirm('Do you really want to issue the book?');">
@@ -166,17 +157,17 @@ ResultSet rs = st1.executeQuery(query);
 while(rs.next()){
 %>
  <div id="form-wrapper" style="max-width:400px;margin:auto;">
-    <label for="name1" >BOOK ID</label>
+    <label for="name1" >BOOK ID:</label>
     <input type="text" class="form-control" name="bookno1" id="name1" value="<%=rs.getString(2)%>" readonly/>
 </div>
 <br>
 <div id="form-wrapper" style="max-width:460px;margin:auto;">
-    <label for="name1">BOOK NAME</label>
+    <label for="name1">BOOK NAME:</label>
     <input type="text" class="form-control" name="bookname" id="name1" value="<%=rs.getString(3)%>" readonly/>
 </div>
 <br>
 <div id="form-wrapper" style="max-width:400px;margin:auto;">
-    <label for="name1">AUTHOR</label>
+    <label for="name1">AUTHOR:</label>
     <input type="text" class="form-control" name="author" id="name1" value="<%=rs.getString(4)%>" readonly/>
 </div>
 <br>
@@ -185,8 +176,8 @@ while(rs.next()){
     <input type="text" class="form-control" name="qoh" id="name1" value="<%=rs.getString(10)%>" readonly/>
 </div>
 <br>
-<div id="form-wrapper" style="max-width:670px;margin:auto;">
-	<label for="name1">RETURN DATE OF BOOK:</label>
+<div id="form-wrapper" style="max-width:587px;margin:auto;">
+	<label for="name1">BOOK RETURN DATE:&nbsp;&nbsp;&nbsp;</label>
 	<input type="text" class="form-control" name="expreturndate" id="datepicker1" required>
 </div>
 <button type="hidden" id="qq" value="Login" style="display: none;"></button>

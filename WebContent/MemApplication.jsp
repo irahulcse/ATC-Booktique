@@ -143,6 +143,7 @@ catch(Exception e){
 
 </div>
 <jsp:include page="navfooter.jsp" />
+
 <!-- </form> -->
 <!-- <form style="position: absolute; right: 280;">
 <button class="button" onclick="myFunction()"><i class="fa fa-download"> Download</i></button>
@@ -152,7 +153,7 @@ catch(Exception e){
 <form method="post" name="form" style="width:280px">
 <div class='container' align="left">
 <table class='table table-bordered table-striped' border="1">
-<tr align="left"><th>ID</th><th>NAME</th><th>ADDRESS</th><th >CONTACT</th><th>EMAIL</th><th>CITY</th><th>EMP TYPE</th><th>SUPERVISOR NAME</th><th>SUPERVISOR EMAIL ID</th></tr>
+<tr align="left"><th>ID</th><th>NAME</th><th>ADDRESS</th><th >CONTACT</th><th>EMAIL</th><th>EMP TYPE</th><th>SUPERVISOR NAME</th><th>SUPERVISOR EMAIL ID</th><th>ISSUED BOOKS</th><th>RETURNED BOOKS</th><th>PENDING BOOKS</th></tr>
 <%
 Connection con = null;
 String url = "jdbc:mysql://localhost:3306/";
@@ -177,10 +178,12 @@ while(rs.next()){
 <td><%=rs.getString(4)%></td>
 <td><%=rs.getString(5)%></td>
 <td><%=rs.getString(6)%></td>
-<td><%=rs.getString(7)%></td>
 <td><%=rs.getString(8)%></td>
 <td><%=rs.getString(9)%></td>
 <td><%=rs.getString(10)%></td>
+<td><%=rs.getString(13)%></td>
+<td><%=rs.getString(14)%></td>
+<td><%=rs.getString(15)%></td>
 <script>
 function confirmComplete() {
 	var answer=confirm("Are you sure you want to delete the member?");

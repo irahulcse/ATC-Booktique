@@ -134,9 +134,6 @@ catch(Exception e){
 
 </div>
 <jsp:include page="navfooter.jsp" />
-<!-- <form style="position: absolute; right: 280;">
-<button class="button" onclick="myFunction()"><i class="fa fa-download"> Download</i></button>
-</form> -->
 <br>
 <br>
 <form method="post" name="form" onsubmit="greeting()">
@@ -171,7 +168,7 @@ while(rs.next()){
 <td><%=rs.getString(8)%></td>
 <script>
 function confirmComplete() {
-	var answer=confirm("Are you sure you want to delete the member?");
+	var answer=confirm("Are you sure you want to delete the Librarian permanently?");
 	if (answer==true)
 	  {
 		deleteRecord(<%=rs.getString(1)%>);

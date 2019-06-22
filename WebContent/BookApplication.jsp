@@ -56,12 +56,12 @@ function greeting(){
 <body>
 <jsp:include page="navheader.jsp" />
 <div style="width:300px">
-<div style="float: right; width: 140px">
+<div style="float: right; width:140px;">
 <button id="myBtn" class="btn" style="float:right">ADD BOOKS</button>
 </div>
 <div style="float: right; width: 160px">
 <form name="TrainerMenu" action="exportBook.jsp" method="post" onsubmit="greeting()">
-<button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportBook.jsp')" >DOWNLOAD AS CSV</button>
+<button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportBook.jsp')">&nbsp;&nbsp;DOWNLOAD AS CSV</button>
 </form>
 </div>
 </div>
@@ -167,14 +167,14 @@ catch(Exception e){
       </form>  -->
     </div>
   </div>
-
 </div>
+
+
 <jsp:include page="navfooter.jsp" />
-<br>
-<br>
-<form method="post" name="form" style="width:300px">
+<form method="post" name="form" style="width:400px;">
 <div class='container'>
-<table class='table table-bordered table-striped' border="1">
+<h2 align="center"><strong>BOOK SECTION</strong></h2>
+<table class='table table-bordered table-striped' border="1" style="margin-left:auto;margin-right:auto;">
 <tr><th>BOOK NO</th><th>BOOK NAME</th><th >AUTHOR</th><th >PUBLISHER</th><th>PUBLICATION YEAR</th><th>LANGUAGE</th><th>GENRE</th><th>ISBN NO</th><th>QUANTITY ON HAND</th><th>ISSUED QUANTITY</th></tr>
 <%
 Connection con = null;
@@ -207,7 +207,7 @@ while(rs.next()){
 <td><%=rs.getString(11)%></td>
 <script>
 function confirmComplete() {
-	var answer=confirm("Are you sure you want to delete the member?");
+	var answer=confirm("Are you sure you want to delete the book permanently?");
 	if (answer==true)
 	  {
 		deleteRecord(<%=rs.getString(1)%>);
@@ -218,7 +218,7 @@ function confirmComplete() {
 	  }
 }
 </script>
-<td><input type="button" name="edit" value="Edit" style="background-color:green;font-weight:bold;color:white;" onclick="editRecord(<%=rs.getString(1)%>);"></td>
+<td><input type="button" name="edit" value="Edit" style="background-color:green;font-weight:bold;color:white;"onclick="editRecord(<%=rs.getString(1)%>);"></td>
 <td><input type="button" name="delete" value="Mark As Deleted" style="background-color:red;font-weight:bold;color:white;"onclick="{return confirmComplete();}" ></td>
 </tr>
 <%

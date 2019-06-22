@@ -20,7 +20,19 @@
 </style>
 <script type="text/javascript" >
     function greeting(){
-        alert("Thanks For Download The File! It will be downloaded in csv folder of the C: directory");
+        alert("Thanks For Downloading The File! It will be downloaded in csv folder of the C: directory");
+    }
+    function editRecord(id){
+    	var f=document.form;
+    	f.method="post";
+    	f.action='LibEdit.jsp?id='+id;
+    	f.submit();
+    }
+    function deleteRecord(id){
+        var f=document.form;
+        f.method="post";
+        f.action='ReturnBookCheck.jsp?id='+id;
+        f.submit();
     }
 </script>
 </head>
@@ -33,11 +45,15 @@
 </form>
 </div>
 <br>
-<h3 align="center"><strong>Issued Book Panel</strong></h3>
-<form method="post" name="form">
+
+
+
+
+<h3 align="center"><strong>Issued Details Panel</strong></h3>
+<form method="post" name="form" onsubmit="greeting()">
 <div class='container'>
 <table class='table table-bordered table-striped' border="1">
-<tr><th>TRANSNO</th><th>BOOKS NO</th><th>MEMBER ID</th><th>TRANSACTION DATE</th><th>EXPECTED RETURN DATE</th></tr>
+<tr><th>TRANS NO</th><th>BOOKS NO</th><th>MEMBER ID</th><th>TRANSACTION DATE</th><th>EXPECTED RETURN DATE</th><th>RETURN BOOK</th></tr>
 <%
 Connection con = null;
 String url = "jdbc:mysql://localhost:3306/";
@@ -46,11 +62,12 @@ String driver = "com.mysql.jdbc.Driver";
 String userName ="rahul";
 String password="pass";
 
+
 Statement st;
 try{
 Class.forName(driver);
 con = DriverManager.getConnection(url+db,userName,password);
-String query = "select * from trans  where tdeleted='n' ORDER BY transno DESC ";
+String query = "select * from trans where tdeleted='n'";
 st = con.createStatement();
 ResultSet rs = st.executeQuery(query);
 %>
@@ -62,6 +79,20 @@ while(rs.next()){
 <td><%=rs.getString(3)%></td>
 <td><%=rs.getString(4)%></td>
 <td><%=rs.getString(5)%></td>
+<script>
+function confirmComplete(id) {
+	var answer=confirm("Before Returning, Pls check the Book Properly?");
+	if (answer==true)
+	  {
+		deleteRecord(id);
+	  }
+	else
+	  {
+	    return false;
+	  }
+}
+</script>
+<td><input type="button" name="delete" value="Return Book" style="background-color:red;font-weight:bold;color:white;" onclick="{return confirmComplete(<%=rs.getString(1)%>);}"></td>
 </tr>
 <%
 }

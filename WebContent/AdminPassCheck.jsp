@@ -16,10 +16,7 @@ ResultSet rs = st.executeQuery(sql);
 
 if(rs.next()){
 	session.setAttribute("uid1",uid1);
-
-	%>
-	<jsp:forward page="navadmin.jsp"></jsp:forward>
-<%
+	response.sendRedirect("navadmin.jsp");
 }
 else{
 	response.sendRedirect("index.jsp");

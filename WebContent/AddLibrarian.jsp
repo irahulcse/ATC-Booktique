@@ -59,7 +59,7 @@ body { background:  white !important; }
 <div style="float:right;width:40%" style="width:300px">
 <div class="row-md-3">
   <div class="col-md-6">
-<h3 align="center"><strong>Issuing Book</strong></h3>
+<h3 align="left"><strong>Issuing Book</strong></h3>
 <!-- <form action="IssueBook.jsp" method="post" name="form"> -->
 <%
 String id=request.getParameter("id");
@@ -74,21 +74,20 @@ ResultSet rs = st.executeQuery(query);
 while(rs.next()){
 %>
  <div id="form-wrapper" style="max-width:350px;margin:auto;">
-    <label for="name1" >BOOK ID</label><input type="text" class="form-control" name="bookno" value="<%=rs.getString(2)%>" disabled/>
+    <label for="name1" >BOOK ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" class="form-control" name="bookno" value="<%=rs.getString(2)%>" disabled/>
+</div>
+<br>
+<div id="form-wrapper" style="max-width:400px;margin:auto;">
+    <label for="name1">BOOK NAME:</label><input type="text" class="form-control" name="bookname" value="<%=rs.getString(3)%>" disabled/>
 </div>
 <br>
 <div id="form-wrapper" style="max-width:350px;margin:auto;">
-    <label for="name1">BOOK NAME</label>
-    <input type="text" class="form-control" name="bookname" value="<%=rs.getString(3)%>" disabled/>
-</div>
-<br>
-<div id="form-wrapper" style="max-width:350px;margin:auto;">
-    <label for="name1">AUTHOR</label>
+    <label for="name1">AUTHOR:&nbsp;&nbsp;</label>
     <input type="text" class="form-control" name="author" value="<%=rs.getString(4)%>" disabled/>
 </div>
 <br>
-<div id="form-wrapper" style="max-width:350px;margin:auto;">
-    <label for="name1">QOH:</label>
+<div id="form-wrapper" style="max-width:450px;margin:auto;">
+    <label for="name1">QOH:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
     <input type="text" class="form-control" name="qoh" value="<%=rs.getString(10)%>" disabled/>
 </div>
 <br>
