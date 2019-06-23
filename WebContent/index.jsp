@@ -131,7 +131,7 @@
     <input type="password" class="form-control" name="password1" placeholder="Password"/>
   </div>  
   <button type="submit" class="btn btn-primary">Login</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Forget Password</button>
+  <button type="button" class="btn btn-primary" style="background-color: #008CBA;" data-toggle="modal" data-target="#myModal2">Forget Password</button>
 </form>
 
 <!-- Admin's Modal Box! Pls have a look to it for all the entities -->

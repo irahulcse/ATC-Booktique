@@ -48,7 +48,6 @@
 
 
 
-
 <h3 align="center"><strong>Issued Details Panel</strong></h3>
 <form method="post" name="form" onsubmit="greeting()">
 <div class='container'>
