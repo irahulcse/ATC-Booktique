@@ -63,12 +63,14 @@ String password="pass";
 
 
 Statement st;
+Statement st2;
 try{
 Class.forName(driver);
 con = DriverManager.getConnection(url+db,userName,password);
 String query = "select * from trans where tdeleted='n'";
 st = con.createStatement();
 ResultSet rs = st.executeQuery(query);
+
 %>
 <%
 while(rs.next()){
