@@ -40,12 +40,18 @@
 
 <jsp:include page="Search.jsp" /> 	
 <div style=" float:left;width:280px">
+<!-- <form name="TrainerMenu" action="/HelloJSP/export/exportTrans.jsp" method="post" onsubmit="greeting()"> -->
 <form name="TrainerMenu" action="exportTrans.jsp" method="post" onsubmit="greeting()">
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportTrans.jsp')">DOWNLOAD AS CSV</button>
 </form>
 </div>
+<div style=" float:left;width:280px">
+<form name="TrainerMenu" action="exportTrans.jsp" method="post" onsubmit="greeting()">
+<button id="myBtn" class="btn"  style="float:right" onclick="openPage('ReturnedBookApplication.jsp')">RETURNED BOOK PANEL</button>
+</form>
+</div>
 <br>
-
+<br>
 
 
 <h3 align="center"><strong>Issued Details Panel</strong></h3>
