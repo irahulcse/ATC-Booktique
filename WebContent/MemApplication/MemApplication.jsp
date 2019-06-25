@@ -40,7 +40,7 @@ function greeting(){
 <button id="myBtn" class="btn" style="float:right">ADD </button>
 </div>
 <div style="float: right; width:200px">
-<form name="TrainerMenu" action="exportMem.jsp" method="post" onsubmit="greeting()">
+<form name="TrainerMenu" action="../export/exportMem.jsp" method="post" onsubmit="greeting()">
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportMem.jsp')" >DOWNLOAD AS CSV</button>
 </form>
 </div>
@@ -185,11 +185,11 @@ while(rs.next()){
 <td><%=rs.getString(14)%></td>
 <td><%=rs.getString(15)%></td>
 <script>
-function confirmComplete() {
+function confirmComplete(id) {
 	var answer=confirm("Are you sure you want to delete the member?");
 	if (answer==true)
 	  {
-		deleteRecord(<%=rs.getString(1)%>);
+		deleteRecord(id);
 	  }
 	else
 	  {
@@ -198,7 +198,7 @@ function confirmComplete() {
 }
 </script>
 <td><input type="button" name="edit" value="Edit" style="background-color:green;font-weight:bold;color:white;" onclick="editRecord(<%=rs.getString(1)%>);"></td>
-<td><input type="button" name="delete" value="Delete" style="background-color:red;font-weight:bold;color:white;" onclick="{return confirmComplete();}"></td>
+<td><input type="button" name="delete" value="Delete" style="background-color:red;font-weight:bold;color:white;" onclick="{return confirmComplete(<%=rs.getString(1)%>);}"></td>
 </tr>
 <%
 }

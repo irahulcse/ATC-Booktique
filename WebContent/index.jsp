@@ -54,7 +54,7 @@
 <body>
 
 <div class="jumbotron text-center" style="background-color: powderblue;height:150px;margin-bottom:0;">
-  <h2 ><strong><img src="ATClogo.PNG" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
+  <h2 ><strong><img src="ATClogo.jpeg" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
 </div>
 
 
@@ -82,7 +82,7 @@
   <div class="form-group">
   </div>
   <button type="submit" class="btn btn-primary">Login</button>
-   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Forget Password</button>
+   <button type="button" class="btn btn-primary"style="background-color: #008CBA;" data-toggle="modal" data-target="#myModal">Forget Password</button>
   </form>
   
 
@@ -96,7 +96,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title" align="center"><strong>FORGET PASSWORD LIBRARIAN!</strong></h4>
         </div>
-        <form action="changePasswordLibrarian.jsp" method="post">
+        <form action="changePassword/changePasswordLibrarian.jsp" method="post">
         <div class="modal-body">
           
 			<table class='table table-bordered table-striped' border="1" style="margin-left:auto;margin-right:auto;">
@@ -144,7 +144,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title" align="center"><strong>FORGET PASSWORD ADMIN!</strong></h4>
         </div>
-        <form action="changePasswordAdmin.jsp" method="post">
+        <form action="changePassword/changePasswordAdmin.jsp" method="post">
         <div class="modal-body">
           
 			<table class='table table-bordered table-striped' border="1" style="margin-left:auto;margin-right:auto;">

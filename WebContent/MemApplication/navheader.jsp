@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="bootstrap.min.css"/>
+<link rel="stylesheet" href="../bootstrap.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -162,13 +162,13 @@
 </head>
 <body>
 <div class="jumbotron text-center" style="background-color: powderblue;height:150px;margin-bottom:0;">
-  <h2 ><strong><img src="ATClogo.jpeg" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
+  <h2 ><strong><img src="../ATClogo.jpeg" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
 </div>
 <nav class="navbar navbar-inverse">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header"> 
-      <a class="navbar-brand" href="navadmin.jsp"><b>Online Library System</b></a>
+      <a class="navbar-brand" href="../navadmin.jsp"><b>Online Library System</b></a>
     </div>
     <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -180,7 +180,7 @@
     </div>/.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<script src="jquery.min.js"></script>
-<script src="bootstrap.min.js"></script>
+<script src="../jquery.min.js"></script>
+<script src="../bootstrap.min.js"></script>
 </body>
 </html>

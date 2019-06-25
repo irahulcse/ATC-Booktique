@@ -29,7 +29,7 @@
 </head>
 <body>
 <div class="jumbotron text-center" style="background-color: powderblue;height:150px;margin-bottom:0;">
-  <h2 ><strong><img src="ATClogo.PNG" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
+  <h2 ><strong><img src="ATClogo.jpeg" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
 </div>
 <nav class="navbar navbar-inverse">
   <div class="container">
@@ -51,27 +51,19 @@
   <div align="center">
   <h3 align="centre"><b>ADMINISTRATIVE TASK</h3>
   <br>
-   <form action="LibApplication.jsp">
-  <!--  <table class=button>
-    <td><button class="button">A</button>
-    </td>
-</table>
-<table class=button>
-    <td><button class="button">B</button>
-    </td>
-</table> -->
+   <form action="LibApplication/LibApplication.jsp">
    <button class="button" style="width:350px">LIBRARIAN PORTAL</style></button>
 	</form>  
 	<br>
-	<form action="MemApplication.jsp">
+	<form action="MemApplication/MemApplication.jsp">
    <button class="button button4" style="width:350px">MEMBER PORTAL</button>
 	</form> 
 	<br>
-	<form action="BookApplication.jsp">
+	<form action="BookApplication/BookApplication.jsp">
    <button class="button button5" style="width:350px">BOOKS PORTAL</button>
 	</form> 
 	<br>
-	<form action="TransApplication.jsp">
+	<form action="TransApplication/TransApplication.jsp">
  	   <button class="button button3" style="width:360px">TRANSACTION PORTAL</button>
 	</form> 
   </div>

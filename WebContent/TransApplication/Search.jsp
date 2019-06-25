@@ -1,50 +1,17 @@
+<!DOCTYPE html>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="bootstrap.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" href="../bootstrap.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">body { background:  white !important; }
-.button {
-  background-color: #008CBA; /* Green */
-  border: none;
-  color: white;
-  padding: 5px 8px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 20px;
-  margin-left: 900px;
-}
-.buttonnew {
- background-color: #008CBA; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 20px;
-  margin-left: 900px;
-}
-
-
-.button3 {background-color: #f44336;} /* Red */ 
-.button4 {background-color: #800080;} /* Gray */ 
-.button5 {background-color: #8000ff;} /* Black */
-.button6{padding: 30px 100px;background-color: #8000ff;}
-
 
 .modal {
   display: none; /* Hidden by default */
@@ -67,7 +34,7 @@
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 35%;
+  width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -162,25 +129,34 @@
 </head>
 <body>
 <div class="jumbotron text-center" style="background-color: powderblue;height:150px;margin-bottom:0;">
-  <h2 ><strong><img src="ATClogo.jpeg" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
+  <h2 ><strong><img src="../ATClogo.PNG" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
 </div>
 <nav class="navbar navbar-inverse">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header"> 
-      <a class="navbar-brand" href="navadmin.jsp"><b>Online Library System</b></a>
+      <a class="navbar-brand" href="../navadmin.jsp"><b>Online Library System</b></a>
     </div>
     <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
                 <li><a href="navadmin.jsp"><b>LOGOUT</b></a></li>
        </ul>
-       <div>
-       
-       </div>
+   <div>
+   
+   </div>
     </div>/.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<script src="jquery.min.js"></script>
-<script src="bootstrap.min.js"></script>
+<br>
+
+
+
+
+<div class="container" align="right">
+<form class="form-inline" method="post" action="SearchCheck.jsp">
+<input type="text" name="bookno" class="form-control" placeholder="Search By Book Details">
+ <button type="submit" name="save" class="btn btn-primary">Issue Book</button>
+</form>
+</div>
 </body>
-</html>
+</html> 

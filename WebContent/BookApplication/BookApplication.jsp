@@ -57,10 +57,10 @@ function greeting(){
 <jsp:include page="navheader.jsp" />
 <div style="width:300px">
 <div style="float: right; width:140px;">
-<button id="myBtn" class="btn" style="float:right">ADD BOOKS</button>
+&nbsp;&nbsp;<button id="myBtn" class="btn" style="float:right">ADD BOOKS</button>
 </div>
 <div style="float: right; width: 160px">
-<form name="TrainerMenu" action="exportBook.jsp" method="post" onsubmit="greeting()">
+<form name="TrainerMenu" action="/HelloJSP/export/exportBook.jsp" method="post" onsubmit="greeting()">
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportBook.jsp')">&nbsp;&nbsp;DOWNLOAD AS CSV</button>
 </form>
 </div>
@@ -206,11 +206,11 @@ while(rs.next()){
 <td><%=rs.getString(10)%></td>
 <td><%=rs.getString(11)%></td>
 <script>
-function confirmComplete() {
+function confirmComplete(id) {
 	var answer=confirm("Are you sure you want to delete the book permanently?");
 	if (answer==true)
 	  {
-		deleteRecord(<%=rs.getString(1)%>);
+		deleteRecord(id);
 	  }
 	else
 	  {
@@ -219,7 +219,7 @@ function confirmComplete() {
 }
 </script>
 <td><input type="button" name="edit" value="Edit" style="background-color:green;font-weight:bold;color:white;"onclick="editRecord(<%=rs.getString(1)%>);"></td>
-<td><input type="button" name="delete" value="Mark As Deleted" style="background-color:red;font-weight:bold;color:white;"onclick="{return confirmComplete();}" ></td>
+<td><input type="button" name="delete" value="Mark As Deleted" style="background-color:red;font-weight:bold;color:white;"onclick="{return confirmComplete(<%=rs.getString(1)%>);}" ></td>
 </tr>
 <%
 }

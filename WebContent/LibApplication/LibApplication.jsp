@@ -1,7 +1,7 @@
 <%@ page import="java.sql.*" %>
 <html>
 <head>
-<link rel='stylesheet' href='bootstrap.min.css'/>
+<link rel='stylesheet' href='../bootstrap.min.css'/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">body { background:  white !important; }
 .btn {
@@ -51,8 +51,8 @@ function confirmComplete() {
 <div style="float: right; width: 100px">
 <button id="myBtn" class="btn" style="float:right">ADD </button>
 </div>
-<div style="float: right; width:200px">
-<form name="TrainerMenu" action="exportLib.jsp" method="post" onsubmit="greeting()">
+<div style="float:right; width:200px">
+<form name="TrainerMenu" action="../export/exportLib.jsp" method="post" onsubmit="greeting()">
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportLib.jsp')" >DOWNLOAD AS CSV</button>
 </form>
 </div>
@@ -108,7 +108,7 @@ catch(Exception e){
 </div>
 <div class="form-group">
     <label for="name1">Librarian Contact</label>
-    <input type="text" class="form-control" name="lcontact" id="lcontact" placeholder="Phone Contact No" pattern="[7-9]{1}[0-9]{9}" 
+    <input type="text" class="form-control" name="lcontact" id="lcontact" placeholder="Phone Contact No"  pattern="[7-9]{1}[0-9]{9}"
        title="Phone number with 7-9 and remaing 9 digit with 0-9" required/>
 </div>
 <div class="form-group">
@@ -126,14 +126,11 @@ catch(Exception e){
 </div>
     </div>
     <div class="modal-footer">
-    	 <!-- <form action="AddLibrarianCheck.jsp" method="post" style="width:300px" autocomplete="on">
-      <button type="submit" class="buttonnew">Submit</button>
-      </form>  -->
     </div>
   </div>
 
 </div>
-<jsp:include page="navfooter.jsp" />
+<jsp:include page="../navfooter.jsp" />
 <br>
 <br>
 <form method="post" name="form" onsubmit="greeting()">
@@ -167,11 +164,11 @@ while(rs.next()){
 <td><%=rs.getString(6)%></td>
 <td><%=rs.getString(8)%></td>
 <script>
-function confirmComplete() {
+function confirmComplete(id) {
 	var answer=confirm("Are you sure you want to delete the Librarian permanently?");
 	if (answer==true)
 	  {
-		deleteRecord(<%=rs.getString(1)%>);
+		deleteRecord(id);
 	  }
 	else
 	  {
@@ -180,7 +177,7 @@ function confirmComplete() {
 }
 </script>
 <td><input type="button" name="edit" value="Edit" style="background-color:green;font-weight:bold;color:white;" onclick="editRecord(<%=rs.getString(1)%>);"></td>
-<td><input type="button" name="delete" value="Mark As Deleted" style="background-color:red;font-weight:bold;color:white;" onclick="{return confirmComplete();}"></td>
+<td><input type="button" name="delete" value="Mark As Deleted" style="background-color:red;font-weight:bold;color:white;" onclick="{return confirmComplete(<%=rs.getString(1)%>);}"></td>
 </tr>
 <%
 }
@@ -191,8 +188,8 @@ catch(Exception e){
 e.printStackTrace();
 }
 %>
-</div>
 </table>
+</div>
 </form>
 </body>
 </html>

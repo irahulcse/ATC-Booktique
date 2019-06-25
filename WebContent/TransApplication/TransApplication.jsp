@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel='stylesheet' href='bootstrap.min.css'/>
+<link rel='stylesheet' href='../bootstrap.min.css'/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -22,12 +22,6 @@
     function greeting(){
         alert("Thanks For Downloading The File! It will be downloaded in csv folder of the C: directory");
     }
-    function editRecord(id){
-    	var f=document.form;
-    	f.method="post";
-    	f.action='LibEdit.jsp?id='+id;
-    	f.submit();
-    }
     function deleteRecord(id){
         var f=document.form;
         f.method="post";
@@ -37,16 +31,14 @@
 </script>
 </head>
 <body>
-
 <jsp:include page="Search.jsp" /> 	
 <div style=" float:left;width:280px">
-<!-- <form name="TrainerMenu" action="/HelloJSP/export/exportTrans.jsp" method="post" onsubmit="greeting()"> -->
-<form name="TrainerMenu" action="exportTrans.jsp" method="post" onsubmit="greeting()">
+<form name="TrainerMenu" action="/HelloJSP/export/exportTrans.jsp" method="post" onsubmit="greeting()"> 
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportTrans.jsp')">DOWNLOAD AS CSV</button>
 </form>
 </div>
 <div style=" float:left;width:280px">
-<form name="TrainerMenu" action="exportTrans.jsp" method="post" onsubmit="greeting()">
+<form name="TrainerMenu" action="ReturnedBookApplication.jsp" method="post" onsubmit="greeting()">
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('ReturnedBookApplication.jsp')">RETURNED BOOK PANEL</button>
 </form>
 </div>
@@ -110,8 +102,8 @@ catch(Exception e){
 e.printStackTrace();
 }
 %>
-</div>
 </table>
+</div>
 </form>
 <jsp:include page="navfooter.jsp" />
 </body>

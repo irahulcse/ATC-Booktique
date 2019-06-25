@@ -36,7 +36,7 @@ function alertsomething(){
 	//function automatically when page loads
 	$(document).ready(function(){
 	  alertsomething();
-	  window.location.href = "index.jsp";
+	  window.location.href = "../index.jsp";
 	})
 </script>
 <% 
@@ -58,7 +58,7 @@ function alertsomething(){
 	//function automatically when page loads
 	$(document).ready(function(){
 	  alertsomething();
-	  window.location.href = "index.jsp";
+	  window.location.href = "../index.jsp";
 	})
 </script>
 <%
