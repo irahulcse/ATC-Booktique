@@ -92,7 +92,7 @@ Statement st;
 try{
 Class.forName(driver);
 con = DriverManager.getConnection(url+db,userName,password);
-String query = "select * from mem where mdeleted='n' and (mname='"+bookno+"' OR memid  = '"+bookno+"' OR mcontact   = '"+bookno+"' OR superviser_name   = '"+bookno+"' OR memail   = '"+bookno+"' ) ";
+String query = "select * from mem where mdeleted='n' and (mname  like '%"+bookno+"%' OR memid  like '%"+bookno+"%' OR mcontact like '%"+bookno+"%' OR superviser_name  like '%"+bookno+"%' OR memail like '%"+bookno+"%' ) ";
 st = con.createStatement();
 ResultSet rs = st.executeQuery(query);
 %>

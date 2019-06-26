@@ -55,6 +55,81 @@ function greeting(){
 </head>
 <body>
 <jsp:include page="navheader.jsp" />
+<div class="container" align="right">
+<form id="form1" name="form1" method="post" class="form-inline">
+<input type="text" class="form-control" placeholder= 'Search by rollno...' id="roll_no">
+ <button type="submit"  class="btn btn-primary" id="search">Search Book </button>
+ <table class='table table-bordered table-striped' border="1">
+<tr><th>BOOK NO</th><th>BOOK NAME</th><th >AUTHOR</th><th>LANGUAGE</th><th>Genre</th></tr>
+<tr><td><input type="email" class="form-control" placeholder='Book No' id="book_no" size="10"></td>
+<td><input type="email" class="form-control" placeholder= 'Book Name' id="book" size="10"></td>
+<td><input type="email" class="form-control" placeholder= 'Book Name' id="book_name"></td>
+<td><input type="email" class="form-control" placeholder= 'Book Name' id="book_name"></td>
+<td><input type="email" class="form-control" placeholder= 'Book Name' id="book_name"></td>
+</tr>
+</table>
+</form>
+</div>
+<!-- <script>
+$("#search").click(function() {
+var roll_no= $('#roll_no').val();
+book_no.value = book_no;
+$.ajax({
+url: "SearchBook.jsp",
+type: 'POST',
+data: {roll_no: roll_no},
+success: function(data) {
+$('#book_no').val(data);
+alert(data);
+var book_no = data;
+}/* ,
+success: function(data) {
+$('#book_name').val(data);
+var book_name = data;
+},
+success: function(data) {
+$('#author_name').val(data);
+var author_name = data;
+},
+success: function(data) {
+$('#language_name').val(data);
+var language_name = data;
+},
+success: function(data) {
+$('#genre_name').val(data);
+var genre_name = data;
+}	 */
+});
+});
+</script> -->
+<script>
+$("#search").click(function() {
+var roll_no= $('#roll_no').val();
+book_no.value = book_no;
+/* book_name.value=book_name; */
+$.ajax({
+url: "SearchBook.jsp",
+type: 'POST',
+data: {roll_no: roll_no},
+data1:{roll_no: roll_no},
+success: function(data) {
+$('#book_no').val(data);
+alert(data);
+var book_no = data;
+},
+/* success: function(data1) {
+	$('#book_name').val(data1);
+	var book_name = data1;
+}, */
+});
+});
+</script>
+
+
+
+<br>
+
+
 <div style="width:300px">
 <div style="float: right; width:140px;">
 &nbsp;&nbsp;<button id="myBtn" class="btn" style="float:right">ADD BOOKS</button>
@@ -77,7 +152,7 @@ function greeting(){
  <div class="container">
 <div class="row">
 <div class="col-sm-8">
-<form action="AddBookCheck.jsp" method="post" style="width:300px" >
+<form action="AddBookCheck.jsp" method="post" style="width:300px">
 <div class="form-group">
 <label for="name1">BOOK ID</label>
 <%
@@ -171,7 +246,7 @@ catch(Exception e){
 
 
 <jsp:include page="navfooter.jsp" />
-<form method="post" name="form" style="width:400px;">
+<form method="post" name="form"  class="form-inline">
 <div class='container'>
 <h2 align="center"><strong>BOOK SECTION</strong></h2>
 <table class='table table-bordered table-striped' border="1" style="margin-left:auto;margin-right:auto;">

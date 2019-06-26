@@ -12,7 +12,12 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<style type="text/css">body { background:  white !important; }
+<style type="text/css">
+body { 
+
+	background-image: url("back4.jpg"); 
+
+}
 .button {
   background-color: #008CBA; /* Green */
   border: none;
@@ -52,14 +57,10 @@
 
 </head>
 <body>
-
-<div class="jumbotron text-center" style="background-color: powderblue;height:150px;margin-bottom:0;">
-  <h2 ><strong><img src="ATClogo.jpeg" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
-</div>
-
+<div class="rxbodyfield text-center" style="margin-bottom:0; height:87px; 	background:  white !important;"><div class="amt-logo-container"><a href="http://www.atctower.in/en/index.htm" title="Home"><img alt="atc-india-logo" class="amt-logo" height="81" src="atclogo.png" width="185" /></a></div></div></div>
 
 <nav class="navbar navbar-inverse">
-  <div class="container">
+  <div class="container" >
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header"> 
       <a class="navbar-brand" href="index.jsp"><b>Online Library System</b></a>
@@ -69,14 +70,15 @@
 
 <div class="row-md-3">
   <div class="col-md-6">
-  <h3><b>LIBRARIAN LOGIN</b></h3>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <h3 style="color:white;"><b>LIBRARIAN LOGIN</b></h3>
    <form action="LibrarianPassCheck.jsp" method="post" style="width:300px">
   <div class="form-group">
-    <label for="email1">Employee Id</label>
+    <label for="email1" style="color:white;">Employee Id</label>
     <input type="text" class="form-control" name="eid1"  placeholder="Employee Id"/>
   </div>
   <div class="form-group">
-    <label for="password1">Password</label>
+    <label for="password1" style="color:white;">Password</label>
     <input type="password" class="form-control" name="password1" placeholder="Librarien's Password"/>
   </div>  
   <div class="form-group">
@@ -120,14 +122,15 @@
    
   
 <div class="col-md-6">
-  <h3 ><b>ADMIN LOGIN</b></h3>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <h3 style="color:white;"><b>ADMIN LOGIN</b></h3>
   <form action="AdminPassCheck.jsp" method="post" style="width:300px">
   <div class="form-group">
-    <label for="email1">Employee Name</label>
+    <label for="email1" style="color:white;">Employee Name</label>
     <input type="text" class="form-control" name="uid1"  placeholder="Employee Name"/>
   </div>
   <div class="form-group">
-    <label for="password1">Password</label>
+    <label for="password1" style="color:white;">Password</label>
     <input type="password" class="form-control" name="password1" placeholder="Password"/>
   </div>  
   <button type="submit" class="btn btn-primary">Login</button>

@@ -150,7 +150,7 @@ catch(Exception e){
 </form> -->
 <br>
 <br>
-<form method="post" name="form" style="width:280px">
+<form method="post" name="form" class="form-inline">
 <div class='container' align="left">
 <table class='table table-bordered table-striped' border="1">
 <tr align="left"><th>ID</th><th>NAME</th><th>ADDRESS</th><th >CONTACT</th><th>EMAIL</th><th>EMP TYPE</th><th>SUPERVISOR NAME</th><th>SUPERVISOR EMAIL ID</th><th>ISSUED BOOKS</th><th>RETURNED BOOKS</th><th>PENDING BOOKS</th></tr>

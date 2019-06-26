@@ -167,7 +167,7 @@ Statement st;
 try{
 Class.forName(driver);
 con = DriverManager.getConnection(url+db,userName,password);
-String query = "select * from books where bdeleted='n' and (bookno='"+bookno+"' OR bookname = '"+bookno+"' OR author = '"+bookno+"' OR publisher = '"+bookno+"' OR language = '"+bookno+"' OR bcategoryid = '"+bookno+"' OR isbn_no = '"+bookno+"' OR publication_year = '"+bookno+"') ";
+String query = "select * from books where bdeleted='n' and (bookno like '%"+bookno+"%' OR bookname like '%"+bookno+"%' OR author like '%"+bookno+"%' OR publisher like '%"+bookno+"%' OR language like '%"+bookno+"%' OR bcategoryid like '%"+bookno+"%' OR isbn_no like '%"+bookno+"%' OR publication_year like '%"+bookno+"%') ";
 st = con.createStatement();
 ResultSet rs = st.executeQuery(query);
 %>

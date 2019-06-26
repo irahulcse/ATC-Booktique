@@ -129,7 +129,7 @@
 </head>
 <body>
 <div class="jumbotron text-center" style="background-color: powderblue;height:150px;margin-bottom:0;">
-  <h2 ><strong><img src="../ATClogo.PNG" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
+  <h2 ><strong><img src="../ATClogo.jpeg" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
 </div>
 <nav class="navbar navbar-inverse">
   <div class="container">

@@ -22,15 +22,15 @@ try{
 String roll_no=request.getParameter("roll_no");
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select *  from books where bookno='"+roll_no+"'";
+String sql ="select *  from books where bookno='"+roll_no+"' and bdeleted='n'";
 resultSet = statement.executeQuery(sql);
 int i=0;
 while(resultSet.next()){
 %>
 <% 
- String city_name=resultSet.getString("author");
-out.print(city_name);
-
+String book_no=resultSet.getString("bookno");
+out.print(book_no);
+/* out.print(book_no+" "+book_name); */
 }
 connection.close();
 } catch (Exception e) {
