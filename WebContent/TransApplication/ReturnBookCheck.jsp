@@ -10,6 +10,10 @@ Statement st=con.createStatement();
 Statement st1=con.createStatement();
 Statement st2=con.createStatement();
 Statement st3=con.createStatement();
+Statement st4=con.createStatement();
+
+//We are setting the tdeleted to yes, so that we can filter the returned books with unreturned ones;
+st4.executeUpdate("update trans set trans.tdeleted='y' where transno='"+id+"' ");
 
 //In the below query we are updating the return date and time in the trans table
 st.executeUpdate("update trans set trans.ReturnDate=current_timestamp where transno='"+id+"'");

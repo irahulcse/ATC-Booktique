@@ -22,6 +22,10 @@
     function greeting(){
         alert("Thanks For Downloading The File! It will be downloaded in csv folder of the C: directory");
     }
+    function greeting2()
+    {
+    	alert("Welcome To The Panel Where All Books Are Returned Successfully");
+    }
     function deleteRecord(id){
         var f=document.form;
         f.method="post";
@@ -38,7 +42,7 @@
 </form>
 </div>
 <div style=" float:left;width:280px">
-<form name="TrainerMenu" action="ReturnedBookApplication.jsp" method="post" onsubmit="greeting()">
+<form name="TrainerMenu" action="ReturnedBookApplication.jsp" method="post" onsubmit="greeting2()">
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('ReturnedBookApplication.jsp')">RETURNED BOOK PANEL</button>
 </form>
 </div>
