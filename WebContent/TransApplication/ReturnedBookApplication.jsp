@@ -25,13 +25,22 @@ function greeting(){
 }
 </script>
 <body>
+<%
+	response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma","no-cache");
+	response.setHeader("Expires","0");
+if(session.getAttribute("username")==null)
+{
+	response.sendRedirect("../index.jsp");
+}
+%>
 <jsp:include page="Search.jsp" /> 
 <div style=" float:left;width:280px">
 <form name="TrainerMenu" action="../export/exportReturnTrans.jsp" method="post" onsubmit="greeting()"> 
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportReturnTrans.jsp')">DOWNLOAD AS CSV</button>
 </form>
 </div>
-
+<br>
 <h3 align="center"><strong>Issued Details Panel</strong></h3>
 <form method="post" name="form" onsubmit="greeting()">
 <div class='container'>

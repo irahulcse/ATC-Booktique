@@ -34,6 +34,15 @@ function greeting(){
 </script>
 </head>
 <body>
+<%
+	response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma","no-cache");
+	response.setHeader("Expires","0");
+if(session.getAttribute("username")==null)
+{
+	response.sendRedirect("../index.jsp");
+}
+%>
 <jsp:include page="navheader.jsp" />
 <div style="width:300px">
 <div style="float: right; width: 100px">

@@ -15,7 +15,7 @@
 <style type="text/css">
 body { 
 
-	background-image: url("back4.jpg"); 
+	background-image: url("back2.jpg"); 
 
 }
 .button {
@@ -52,13 +52,48 @@ body {
 .button4 {background-color: #800080;} /* Gray */ 
 .button5 {background-color: #8000ff;} /* Black */
 .button6{padding: 30px 100px;background-color: #8000ff;}
+.amt-head-stripe {
+    background: #fff;
+    height: 100px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.amt-logo-container {
+    text-align: center;
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	background: #fff;
+	width: 200px;
+	height: 90px;
+}
+.amt-main-nav {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 90px;
+    top: 75px;
+    width: 100%;
+    }
+   .perc-region {
+    min-height: 0px !important;
+}
 
 </style>
 
 </head>
 <body>
-<div class="rxbodyfield text-center" style="margin-bottom:0; height:87px; 	background:  white !important;"><div class="amt-logo-container"><a href="http://www.atctower.in/en/index.htm" title="Home"><img alt="atc-india-logo" class="amt-logo" height="81" src="atclogo.png" width="185" /></a></div></div></div>
-
+<div class="perc-region"> 
+<div class="rxbodyfield">
+<div class="amt-main-nav amt-nav">
+<div class="amt-logo-container"><a href="http://www.atctower.in/en/index.htm" title="Home">
+<img alt="atc-india-logo" class="amt-logo" height="81" src="atc_india_logo.png" width="185" />
+</a>
+</div>
+</div>
+</div>
 <nav class="navbar navbar-inverse">
   <div class="container" >
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -67,6 +102,12 @@ body {
     </div>
     </div>
 </nav>
+</div>
+
+
+
+
+
 
 <div class="row-md-3">
   <div class="col-md-6">
@@ -124,14 +165,14 @@ body {
 <div class="col-md-6">
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <h3 style="color:white;"><b>ADMIN LOGIN</b></h3>
-  <form action="AdminPassCheck.jsp" method="post" style="width:300px">
+  <form action="Login" method="post" style="width:300px">
   <div class="form-group">
     <label for="email1" style="color:white;">Employee Name</label>
-    <input type="text" class="form-control" name="uid1"  placeholder="Employee Name"/>
+    <input type="text" class="form-control" name="eid"  placeholder="Employee Name"/>
   </div>
   <div class="form-group">
     <label for="password1" style="color:white;">Password</label>
-    <input type="password" class="form-control" name="password1" placeholder="Password"/>
+    <input type="password" class="form-control" name="password" placeholder="Password"/>
   </div>  
   <button type="submit" class="btn btn-primary">Login</button>
   <button type="button" class="btn btn-primary" style="background-color: #008CBA;" data-toggle="modal" data-target="#myModal2">Forget Password</button>

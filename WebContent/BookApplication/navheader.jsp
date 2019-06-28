@@ -6,9 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="../bootstrap.min.css"/>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<style type="text/css">body { background:  white !important; }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+body { 
+	background:  white !important;
+	/* background-image: url("../back2.jpg"); 
+ */
+}
 .button {
   background-color: #008CBA; /* Green */
   border: none;
@@ -37,13 +42,6 @@
   border-radius: 20px;
   margin-left: 900px;
 }
-
-
-.button3 {background-color: #f44336;} /* Red */ 
-.button4 {background-color: #800080;} /* Gray */ 
-.button5 {background-color: #8000ff;} /* Black */
-.button6{padding: 30px 100px;background-color: #8000ff;}
-
 
 .modal {
   display: none; /* Hidden by default */
@@ -156,29 +154,66 @@
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+.amt-head-stripe {
+    background: #fff;
+    height: 100px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.amt-logo-container {
+    text-align: center;
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	background: #fff;
+	width: 200px;
+	height: 90px;
+}
+.amt-main-nav {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 90px;
+    top: 75px;
+    width: 100%;
+    }
+   .perc-region {
+    min-height: 0px !important;
+}
 </style>
 
 </head>
 <body>
-<div class="jumbotron text-center" style="background-color: powderblue;height:150px;margin-bottom:0;">
-  <h2 ><strong><img src="../ATClogo.jpeg" width="100" height="70">&nbsp;&nbsp;AMERICAN TOWER CORPORATION</strong></h2>
+<div class="perc-region"> 
+<div class="rxbodyfield">
+<div class="amt-main-nav amt-nav">
+<div class="amt-logo-container"><a href="http://www.atctower.in/en/index.htm" title="Home">
+<img alt="atc-india-logo" class="amt-logo" height="81" src="../atc_india_logo.png" width="185" />
+</a>
+</div>
+</div>
 </div>
 <nav class="navbar navbar-inverse">
-  <div class="container">
+  <div class="container" >
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header"> 
       <a class="navbar-brand" href="../navadmin.jsp"><b>Online Library System</b></a>
     </div>
-    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-                <li><a href="navadmin.jsp"><b>LOGOUT</b></a></li>
+                <li><a href="../Logout"><b>LOGOUT</b></a></li>
        </ul>
        <div>
        
        </div>
-    </div>/.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+    </div>
 </nav>
+</div>
+
 <script src="../jquery.min.js"></script>
 <script src="../bootstrap.min.js"></script>
 </body>

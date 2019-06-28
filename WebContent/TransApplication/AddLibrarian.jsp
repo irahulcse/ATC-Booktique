@@ -44,7 +44,15 @@ body { background:  white !important; }
 
 </head>
 <body>
-
+<%
+	response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma","no-cache");
+	response.setHeader("Expires","0");
+if(session.getAttribute("username")==null)
+{
+	response.sendRedirect("../index.jsp");
+}
+%>
 
 <form class="form-inline" method="post" action="IssueBook.jsp" >
 <div style="float:right;width:40%" style="width:300px">

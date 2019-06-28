@@ -1,9 +1,9 @@
-<%@ page import="java.sql.*" %>
+u<%@ page import="java.sql.*" %>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style type="text/css">body { background:  white !important; }
+<style type="text/css">
 .button {
   background-color: #008CBA; /* Green */
   border: none;
@@ -54,82 +54,17 @@ function greeting(){
 </script>
 </head>
 <body>
+<%
+	response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma","no-cache");
+	response.setHeader("Expires","0");
+if(session.getAttribute("username")==null)
+{
+	response.sendRedirect("../index.jsp");
+}
+%>
 <jsp:include page="navheader.jsp" />
-<div class="container" align="right">
-<form id="form1" name="form1" method="post" class="form-inline">
-<input type="text" class="form-control" placeholder= 'Search by rollno...' id="roll_no">
- <button type="submit"  class="btn btn-primary" id="search">Search Book </button>
- <table class='table table-bordered table-striped' border="1">
-<tr><th>BOOK NO</th><th>BOOK NAME</th><th >AUTHOR</th><th>LANGUAGE</th><th>Genre</th></tr>
-<tr><td><input type="email" class="form-control" placeholder='Book No' id="book_no" size="10"></td>
-<td><input type="email" class="form-control" placeholder= 'Book Name' id="book" size="10"></td>
-<td><input type="email" class="form-control" placeholder= 'Book Name' id="book_name"></td>
-<td><input type="email" class="form-control" placeholder= 'Book Name' id="book_name"></td>
-<td><input type="email" class="form-control" placeholder= 'Book Name' id="book_name"></td>
-</tr>
-</table>
-</form>
-</div>
-<!-- <script>
-$("#search").click(function() {
-var roll_no= $('#roll_no').val();
-book_no.value = book_no;
-$.ajax({
-url: "SearchBook.jsp",
-type: 'POST',
-data: {roll_no: roll_no},
-success: function(data) {
-$('#book_no').val(data);
-alert(data);
-var book_no = data;
-}/* ,
-success: function(data) {
-$('#book_name').val(data);
-var book_name = data;
-},
-success: function(data) {
-$('#author_name').val(data);
-var author_name = data;
-},
-success: function(data) {
-$('#language_name').val(data);
-var language_name = data;
-},
-success: function(data) {
-$('#genre_name').val(data);
-var genre_name = data;
-}	 */
-});
-});
-</script> -->
-<script>
-$("#search").click(function() {
-var roll_no= $('#roll_no').val();
-book_no.value = book_no;
-/* book_name.value=book_name; */
-$.ajax({
-url: "SearchBook.jsp",
-type: 'POST',
-data: {roll_no: roll_no},
-data1:{roll_no: roll_no},
-success: function(data) {
-$('#book_no').val(data);
-alert(data);
-var book_no = data;
-},
-/* success: function(data1) {
-	$('#book_name').val(data1);
-	var book_name = data1;
-}, */
-});
-});
-</script>
-
-
-
 <br>
-
-
 <div style="width:300px">
 <div style="float: right; width:140px;">
 &nbsp;&nbsp;<button id="myBtn" class="btn" style="float:right">ADD BOOKS</button>

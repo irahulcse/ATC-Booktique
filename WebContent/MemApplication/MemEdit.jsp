@@ -4,6 +4,16 @@
 </head>
 <%@page language="java"%>
 <%@page import="java.sql.*"%>
+<%
+	response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma","no-cache");
+	response.setHeader("Expires","0");
+if(session.getAttribute("username")==null)
+{
+	response.sendRedirect("../index.jsp");
+}
+%>
+
 <jsp:include page="navheader.jsp" />
 <form method="post" action="MemUpdate.jsp" name="form">
 <%

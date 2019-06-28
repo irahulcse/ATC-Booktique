@@ -66,9 +66,8 @@ function myFunction() {
     window.onunload=function(){null};
 </script>  
 </head>
-
-
 <body>
+
 <font color="WHITE"><marquee direction="left" scrollamount="10" style="background:RED">After issuing, pls don't redirect back and confirm the issue message. Otherwise it will again issue the same book to same author. </marquee></font>
 <form class="form-inline" method="get" action="IssuedBook.jsp" onsubmit="return confirm('Do you really want to issue the book?');">
 <div style="width:100%">
