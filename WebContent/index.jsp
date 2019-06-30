@@ -113,14 +113,14 @@ body {
   <div class="col-md-6">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <h3 style="color:white;"><b>LIBRARIAN LOGIN</b></h3>
-   <form action="LibrarianPassCheck.jsp" method="post" style="width:300px">
+   <form action="LibLogin" method="post" style="width:300px">
   <div class="form-group">
     <label for="email1" style="color:white;">Employee Id</label>
-    <input type="text" class="form-control" name="eid1"  placeholder="Employee Id"/>
+    <input type="text" class="form-control" name="eid"  placeholder="Employee Id"/>
   </div>
   <div class="form-group">
     <label for="password1" style="color:white;">Password</label>
-    <input type="password" class="form-control" name="password1" placeholder="Librarien's Password"/>
+    <input type="password" class="form-control" name="password" placeholder="Librarien's Password"/>
   </div>  
   <div class="form-group">
   </div>

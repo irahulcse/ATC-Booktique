@@ -13,35 +13,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
-
 /**
- * Servlet implementation class Login
+ * Servlet implementation class LibLogin
  */
-@WebServlet("/Login")
-
-public class Login extends HttpServlet {
-	
-	
-	
+@WebServlet("/LibLogin")
+public class LibLogin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
 		String eid=request.getParameter("eid");
-		String password=request.getParameter("password");
-	
+		String  password=request.getParameter("password");
 		try
 		{
 		Class.forName("com.mysql.jdbc.Driver");
-		String sql = "SELECT * FROM admin where adminid='"+eid+"' and Password='"+password+"'";
+		String sql = "SELECT * FROM librarian where lid ='"+eid+"' and currentpassword ='"+password+"'";
 		Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "rahul", "pass");
 		Statement st=conn.createStatement();
 		ResultSet rs = st.executeQuery(sql);
 
 		if(rs.next()){
 			HttpSession session=request.getSession();
-			session.setAttribute("username",eid);
-			response.sendRedirect("navadmin.jsp");
+			session.setAttribute("libusername",eid);
+			response.sendRedirect("navlibrarian.jsp");
 		}
 		else{
 			response.sendRedirect("index.jsp");
@@ -49,9 +41,7 @@ public class Login extends HttpServlet {
 		}
 		catch(Exception e){
 			System.out.println(e);
-		}	
-	
+		}
 	}
-
 
 }

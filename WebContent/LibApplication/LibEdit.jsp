@@ -34,23 +34,24 @@ while(rs.next()){
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">Name</label>
-    <input type="text" class="form-control" name="lname" value="<%=rs.getString(3)%>"/>
+    <input type="text" class="form-control" name="lname" value="<%=rs.getString(3)%>" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">Address</label>
-    <input type="text" class="form-control" name="laddress" value="<%=rs.getString(7)%>" />
+    <input type="text" class="form-control" name="laddress" value="<%=rs.getString(6)%>" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">Contact</label>
-    <input type="text" class="form-control" name="lcontact" value="<%=rs.getString(9)%>" />
+    <input type="text" class="form-control" name="lcontact" value="<%=rs.getString(8)%>" pattern="[7-9]{1}[0-9]{9}" 
+       title="Phone number with 7-9 and remaing 9 digit with 0-9" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">Email</label>
-    <input type="text" class="form-control" name="lemail" value="<%=rs.getString(6)%>" />
+    <input type="email" class="form-control" name="lemail" value="<%=rs.getString(5)%>" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">City</label>
-    <input type="text" class="form-control" name="lcity" value="<%=rs.getString(8)%>" />
+    <input type="text" class="form-control" name="lcity" value="<%=rs.getString(7)%>" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <input type="hidden" class="form-control" name="id" value="<%=rs.getString(1)%>" />

@@ -109,11 +109,11 @@ catch(Exception e){
 </div>
 <div class="form-group">
     <label for="name1">Librarian Name</label>
-    <input type="text" class="form-control" name="lname" id="name1" placeholder="Name" required/>
+    <input type="text" class="form-control" name="lname" id="name1" placeholder="Name" style="text-transform: capitalize;" required/>
 </div>
 <div class="form-group">
     <label for="name1">Librarian Address</label>
-    <input type="text" class="form-control" name="laddress" id="laddress" placeholder="Address" required/>
+    <input type="text" class="form-control" name="laddress" id="laddress" style="text-transform: capitalize;" placeholder="Address" required/>
 </div>
 <div class="form-group">
     <label for="name1">Librarian Contact</label>
@@ -126,7 +126,11 @@ catch(Exception e){
 </div>
 <div class="form-group">
     <label for="name1">Librarian's City</label>
-    <input type="text" class="form-control" name="lcity" id="name1" placeholder="City" required/>
+    <input type="text" class="form-control" name="lcity" id="name1" style="text-transform: capitalize;" placeholder="City" required/>
+</div>
+<div class="form-group">
+    <label for="name1">Librarian's First Time Password</label>
+    <input type="text" class="form-control" name="lcurrentpassword" id="name1" placeholder="First Time Password" required/>
 </div>
 <button type="submit" class="button">Submit</button>
 </form>
