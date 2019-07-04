@@ -1,4 +1,5 @@
 <%@ page import="java.sql.*" %>
+<%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> --%>
 <html>
 <head>
 <link rel='stylesheet' href='../bootstrap.min.css'/>
@@ -95,7 +96,7 @@ ResultSet rs = st.executeQuery(query);
 while(rs.next()){
 	count=rs.getInt(1);
 %>
-<input type="text" class="form-control" name="id" id="name1" placeholder="Employee Id" readonly value=<%="ATCLIB"%><%=count+1%> >
+<input type="text" class="form-control" name="id" id="name1" placeholder="Employee Id" readonly value=<%="LIB00"%><%=count+1%> >
 <%
 }
 %>
@@ -108,32 +109,34 @@ catch(Exception e){
 %>
 </div>
 <div class="form-group">
-    <label for="name1">Librarian Name</label>
+    <label for="name1">Librarian Name&nbsp;<font color="red">*</font></label>
     <input type="text" class="form-control" name="lname" id="name1" placeholder="Name" style="text-transform: capitalize;" required/>
 </div>
 <div class="form-group">
-    <label for="name1">Librarian Address</label>
-    <input type="text" class="form-control" name="laddress" id="laddress" style="text-transform: capitalize;" placeholder="Address" required/>
+    <label for="name1">Librarian's First Time Password&nbsp;<font color="red">*</font></label>
+    <input type="password" class="form-control" name="lcurrentpassword" id="name1" placeholder="First Time Password" required/>
 </div>
 <div class="form-group">
-    <label for="name1">Librarian Contact</label>
+    <label for="name1">Librarian Contact&nbsp;<font color="red">*</font></label>
     <input type="text" class="form-control" name="lcontact" id="lcontact" placeholder="Phone Contact No"  pattern="[7-9]{1}[0-9]{9}"
        title="Phone number with 7-9 and remaing 9 digit with 0-9" required/>
 </div>
 <div class="form-group">
-    <label for="email1">Librarian Email</label>
-    <input type="email" class="form-control" name="lemail" id="email1" placeholder="Email" required/>
+    <label for="email1">Librarian Email&nbsp;<font color="red">*</font></label>
+    <input type="email" class="form-control" name="lemail" id="email1" placeholder="Email" pattern="[a-zA-Z]{3,}.+@americantower.com" title="Format of email id is name@americantower.com" required/>
+</div>
+<div class="form-group">
+    <label for="name1">Librarian Address</label>
+    <input type="text" class="form-control" name="laddress" id="laddress" style="text-transform: capitalize;" placeholder="Address"/>
 </div>
 <div class="form-group">
     <label for="name1">Librarian's City</label>
-    <input type="text" class="form-control" name="lcity" id="name1" style="text-transform: capitalize;" placeholder="City" required/>
+    <input type="text" class="form-control" name="lcity" id="name1" style="text-transform: capitalize;" placeholder="City"/>
 </div>
-<div class="form-group">
-    <label for="name1">Librarian's First Time Password</label>
-    <input type="text" class="form-control" name="lcurrentpassword" id="name1" placeholder="First Time Password" required/>
-</div>
+
 <button type="submit" class="button">Submit</button>
 </form>
+
  </div>
 </div>
 </div>
@@ -149,7 +152,7 @@ catch(Exception e){
 <form method="post" name="form" onsubmit="greeting()">
 <div class='container'>
 <table class='table table-bordered table-striped' border="1">
-<tr><th>EID</th><th>NAME</th><th >ADDRESS</th><th >CONTACT</th><th>EMAIL_ID</th><th>CITY</th><th></th><th></th></tr>
+<tr><th>EID</th><th>NAME</th><th >CONTACT</th><th>EMAIL_ID</th><th >ADDRESS</th><th>CITY</th><th></th><th></th></tr>
 <%
 Connection con = null;
 String url = "jdbc:mysql://localhost:3306/";
@@ -172,10 +175,11 @@ while(rs.next()){
 %>
 <tr><td><%=rs.getString(2)%></td>
 <td><%=rs.getString(3)%></td>
-<td><%=rs.getString(7)%></td>
-<td><%=rs.getString(9)%></td>
+
+<td><%=rs.getString("lcontact")%></td>
+<td><%=rs.getString("lemail")%></td>
 <td><%=rs.getString(6)%></td>
-<td><%=rs.getString(8)%></td>
+<td><%=rs.getString(7)%></td>
 <script>
 function confirmComplete(id) {
 	var answer=confirm("Are you sure you want to delete the Librarian permanently?");

@@ -19,7 +19,7 @@ st4.executeUpdate("update trans set trans.tdeleted='y' where transno='"+id+"' ")
 st.executeUpdate("update trans set trans.ReturnDate=current_timestamp where transno='"+id+"'");
 
 //In the below update query we are basically working to update the quantity of the issued and qoh in the books table..
-st1.executeUpdate("update books inner join trans on trans.bookno=books.bookno set books.issued=books.issued-1,books.qoh=books.qoh+1");
+st1.executeUpdate("update books inner join trans on trans.bookno=books.bookno set books.issued=books.issued-1,books.qoh=books.qoh+1 where transno='"+id+"'");
 
 //In this below query we are going to update the mReturn count +=1, so and also going to generate the mPending(mReturn plus mcount with it).
 st2.executeUpdate("update mem inner join trans on trans.memid=mem.memid set mem.mReturn=mem.mReturn+1,mem.mPending=mem.mcount-mem.mReturn where transno='"+id+"'");

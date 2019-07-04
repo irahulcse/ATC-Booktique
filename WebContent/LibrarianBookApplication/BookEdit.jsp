@@ -61,7 +61,7 @@ while(rs.next()){
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">QOH</label>
-    <input type="number" class="form-control" name="qoh" value="<%=rs.getString(10)%>"/>
+    <input type="number" class="form-control" name="qoh" value="<%=rs.getString(10)%>" min="1"/>
 </div>
 <br>
 <br>

@@ -53,7 +53,7 @@ fw.append('\n');
 fw.flush();
 fw.close();
 conn.close();
-response.sendRedirect("../LibApplication/LibApplication.jsp");
+response.sendRedirect("../AdminLibApplication/LibApplication.jsp");
 } catch (Exception e) {
 e.printStackTrace();
 }

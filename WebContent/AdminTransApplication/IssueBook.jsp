@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ATC Library</title>
 <link rel="stylesheet" href="bootstrap.min.css"/>
 <jsp:include page="navheader.jsp" />
 <style type="text/css">
@@ -68,7 +68,7 @@ function myFunction() {
 </head>
 <body>
 
-<font color="WHITE"><marquee direction="left" scrollamount="10" style="background:RED">After issuing, pls don't redirect back and confirm the issue message. Otherwise it will again issue the same book to same author. </marquee></font>
+<!-- <font color="WHITE"><marquee direction="left" scrollamount="10" style="background:RED">After issuing, pls don't redirect back and confirm the issue message. Otherwise it will again issue the same book to same author. </marquee></font> -->
 <form class="form-inline" method="get" action="IssuedBook.jsp" onsubmit="return confirm('Do you really want to issue the book?');">
 <div style="width:100%">
 <div style="float:right;width:110%">
@@ -116,7 +116,7 @@ while(rs.next()){
 </td>
 <td>
 <div id="form-wrapper" style="max-width:350px;margin:auto;">
-    <input type="text" class="form-control" name="mcount" value="<%=rs.getString(13)%>" readonly/>
+    <input type="text" class="form-control" name="mcount" value="<%=rs.getString(15)%>" readonly/>
 </div>
 </td>
 <td><button type="submit" class="btn btn-primary">ISSUE ME!</button></td>
@@ -155,6 +155,15 @@ Statement st1 = conn.createStatement();
 ResultSet rs = st1.executeQuery(query);
 while(rs.next()){
 %>
+<div id="form-wrapper" style="max-width:587px;margin:auto;">
+	<label for="name1">BOOK RETURN DATE:&nbsp;&nbsp;&nbsp;</label>
+	<input type="text" class="form-control" name="expreturndate" id="datepicker1" required>
+</div>
+<button type="hidden" id="qq" value="Login" style="display: none;"></button>
+ <script type="text/javascript">
+     document.getElementById("qq").click();
+  </script>
+<br>
  <div id="form-wrapper" style="max-width:400px;margin:auto;">
     <label for="name1" >BOOK ID:</label>
     <input type="text" class="form-control" name="bookno1" id="name1" value="<%=rs.getString(2)%>" readonly/>
@@ -165,6 +174,7 @@ while(rs.next()){
     <input type="text" class="form-control" name="bookname" id="name1" value="<%=rs.getString(3)%>" readonly/>
 </div>
 <br>
+
 <div id="form-wrapper" style="max-width:400px;margin:auto;">
     <label for="name1">AUTHOR:</label>
     <input type="text" class="form-control" name="author" id="name1" value="<%=rs.getString(4)%>" readonly/>
@@ -175,15 +185,7 @@ while(rs.next()){
     <input type="text" class="form-control" name="qoh" id="name1" value="<%=rs.getString(10)%>" readonly/>
 </div>
 <br>
-<div id="form-wrapper" style="max-width:587px;margin:auto;">
-	<label for="name1">BOOK RETURN DATE:&nbsp;&nbsp;&nbsp;</label>
-	<input type="text" class="form-control" name="expreturndate" id="datepicker1" required>
-</div>
-<button type="hidden" id="qq" value="Login" style="display: none;"></button>
- <script type="text/javascript">
-     document.getElementById("qq").click();
-  </script>
-<br>
+
 <%
 }
 }

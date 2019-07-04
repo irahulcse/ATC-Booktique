@@ -73,7 +73,7 @@ fw.append('\n');
 fw.flush();
 fw.close();
 conn.close();
-response.sendRedirect("../TransApplication/TransApplication.jsp");
+response.sendRedirect("../AdminTransApplication/TransApplication.jsp");
 } catch (Exception e) {
 e.printStackTrace();
 }

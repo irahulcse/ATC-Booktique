@@ -61,7 +61,7 @@ fw.append('\n');
 fw.flush();
 fw.close();
 conn.close();
-response.sendRedirect("../MemApplication/MemApplication.jsp");
+response.sendRedirect("../AdminMemApplication/MemApplication.jsp");
 } catch (Exception e) {
 e.printStackTrace();
 }

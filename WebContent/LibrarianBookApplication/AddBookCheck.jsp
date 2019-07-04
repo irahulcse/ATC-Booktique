@@ -11,7 +11,7 @@
     String publication_year=request.getParameter("publication_year");
     String language=request.getParameter("language");
     String bcategoryid=request.getParameter("bcategoryid");
-    String isbn_no=request.getParameter("isbn_no");
+    /* String isbn_no=request.getParameter("isbn_no"); */
     String qoh=request.getParameter("qoh");
     String bookprice=request.getParameter("bookprice");
     try
@@ -19,7 +19,7 @@
     Class.forName("com.mysql.jdbc.Driver");
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "rahul", "pass");
     Statement st=conn.createStatement();
-    int i=st.executeUpdate("insert into books(bookno,bookname,author,publisher,publication_year,language,bcategoryid,isbn_no,qoh,bookprice) values('"+bookno+"','"+bookname+"','"+author+"','"+publisher+"','"+publication_year+"','"+language+"','"+bcategoryid+"','"+isbn_no+"','"+qoh+"','"+bookprice+"')");
+    int i=st.executeUpdate("insert into books(bookno,bookname,author,publisher,publication_year,language,bcategoryid,qoh,bookprice) values('"+bookno+"','"+bookname+"','"+author+"','"+publisher+"','"+publication_year+"','"+language+"','"+bcategoryid+"','"+qoh+"','"+bookprice+"')");
     response.setContentType("text/html");
  	PrintWriter pw=response.getWriter();
     pw.print("<h4>Book added successfully</h4>");

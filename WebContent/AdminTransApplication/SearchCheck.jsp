@@ -176,7 +176,7 @@ Statement st;
 try{
 Class.forName(driver);
 con = DriverManager.getConnection(url+db,userName,password);
-String query = "select * from books where bdeleted='n' and (bookno like '%"+bookno+"%' OR bookname like '%"+bookno+"%' OR author like '%"+bookno+"%' OR publisher like '%"+bookno+"%' OR language like '%"+bookno+"%' OR bcategoryid like '%"+bookno+"%' OR isbn_no like '%"+bookno+"%' OR publication_year like '%"+bookno+"%') ";
+String query = "select * from books where bdeleted='n' and (bookno like '%"+bookno+"%' OR bookname like '%"+bookno+"%' OR author like '%"+bookno+"%' OR publisher like '%"+bookno+"%' OR language like '%"+bookno+"%' OR bcategoryid like '%"+bookno+"%' OR isbn_no like '%"+bookno+"%' OR publication_year like '%"+bookno+"%') and qoh>0";
 st = con.createStatement();
 ResultSet rs = st.executeQuery(query);
 %>
@@ -193,7 +193,6 @@ while(rs.next()){
 <td><%=rs.getString(9)%></td>
 <td><%=rs.getString(10)%></td>
 <td><%=rs.getString(11)%></td>
-
 <td><input type="button" name="delete" value="Issue Book" style="background-color:red;font-weight:bold;color:white;" onclick="deleteRecord(<%=rs.getString(1)%>);"></td>
 
 </tr>

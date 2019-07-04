@@ -38,38 +38,38 @@ while(rs.next()){
     <input type="text" class="form-control" name="mname" value="<%=rs.getString(3)%>" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
-    <label for="name1">ADDRESS</label>
-    <input type="text" class="form-control" name="maddress" value="<%=rs.getString(4)%>" required />
-</div>
-<div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">CONTACT</label>
     <input type="text" class="form-control" name="mcontact" value="<%=rs.getString(5)%>" pattern="[7-9]{1}[0-9]{9}" 
        title="Phone number with 7-9 and remaing 9 digit with 0-9" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">EMAIL</label>
-    <input type="email" class="form-control" name="memail" value="<%=rs.getString(6)%>" required/>
-</div>
-<div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
-    <label for="name1">CITY</label>
-    <input type="text" class="form-control" name="mcity" value="<%=rs.getString(7)%>" required/>
+    <input type="email" class="form-control" name="memail" value="<%=rs.getString(6)%>" pattern="[a-zA-Z]{3,}.+@americantower.com" title="Format of email id is name@americantower.com" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">EMP TYPE</label>
-    <input type="text" class="form-control" name="memptyp" value="<%=rs.getString(8)%>" required/>
+    <input type="text" class="form-control" name="memptyp" value="<%=rs.getString(8)%>" disabled/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">SUPERVISOR NAME</label>
-    <input type="text" class="form-control" name="superviser_name" value="<%=rs.getString(9)%>" required/>
+    <input type="text" class="form-control" name="superviser_name" style="text-transform: capitalize;" value="<%=rs.getString(9)%>" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">SUPERVISOR EMAIL ID</label>
-    <input type="text" class="form-control" name="superviser_emailid" value="<%=rs.getString(10)%>" required/>
+    <input type="text" class="form-control" name="superviser_emailid" value="<%=rs.getString(10)%>" pattern="[a-zA-Z]{3,}.+@americantower.com" title="Format of email id is name@americantower.com" required/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">BOOK ISSUED TILL NOW</label>
     <input type="text" class="form-control" name="mcount" value="<%=rs.getString(13)%>" disabled/>
 </div>
+<%-- <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
+    <label for="name1">ADDRESS</label>
+    <input type="text" class="form-control" name="maddress" style="text-transform: capitalize;" value="<%=rs.getString(4)%>" readonly />
+</div>
+<div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
+    <label for="name1">CITY</label>
+    <input type="text" class="form-control" name="mcity" style="text-transform: capitalize;" value="<%=rs.getString(7)%>" readonly/>
+</div> --%>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <input type="hidden" class="form-control" name="id" value="<%=rs.getString(1)%>" />
 </div>

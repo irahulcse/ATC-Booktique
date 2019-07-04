@@ -86,7 +86,7 @@ ResultSet rs = st.executeQuery(query);
 while(rs.next()){
 	count=rs.getInt(1);
 %>
-<input type="text" class="form-control" name="memid" id="name1" placeholder="Employee Id" readonly value=<%="ATCEMP000"%><%=count+1%> >
+<input type="text" class="form-control" name="memid" id="name1" placeholder="Employee Id" readonly value=<%="ATCMEM"%><%=count+1%> >
 <%
 }
 %>
@@ -99,44 +99,44 @@ catch(Exception e){
 %>
 </div>
 <div class="form-group">
-    <label for="name1">Member Name</label>
+    <label for="name1">Member Name&nbsp;<font color="red">*</font></label>
     <input type="text" class="form-control" name="mname" id="name1" style="text-transform: capitalize;" placeholder="Name" required/>
 </div>
 <div class="form-group">
-    <label for="name1">Member Address</label>
-    <input type="text" class="form-control" name="maddress" id="name1" style="text-transform: capitalize;" placeholder="Address" required/>
-</div>
-<div class="form-group">
-    <label for="name1">Member Contact</label>
+    <label for="name1">Member Contact&nbsp;<font color="red">*</font></label>
     <input type="text" class="form-control" name="mcontact" id="name1" placeholder="Phone Contact No" pattern="[7-9]{1}[0-9]{9}" 
        title="Phone number with 7-9 and remaing 9 digit with 0-9" required/>
 </div>
 <div class="form-group">
-    <label for="email1">Member Email</label>
-    <input type="email" class="form-control" name="memail" id="email1" placeholder="Email" required/>
+    <label for="email1">Member Email&nbsp;<font color="red">*</font></label>
+    <input type="email" class="form-control" name="memail" id="email1" placeholder="Enter American Tower Email Id" pattern="[a-zA-Z]{3,}.+@americantower.com" title="Format of email id is name@americantower.com" required/>
 </div>
 <div class="form-group">
-    <label for="name1">Member City</label>
-    <input type="text" class="form-control" name="mcity" id="name1" style="text-transform: capitalize;" placeholder="City" required/>
-</div>
-<div class="form-group">
-    <label for="name1">Member Employee Type</label>
+    <label for="name1">Member Employee Type&nbsp;<font color="red">*</font></label>
     <!-- <input type="text" class="form-control" name="memtyp" id="name1" placeholder="Employee Type" required/> -->
 	<select  name="memtyp" required>
 	  <option value="">Select Employee Type</option>
 	  <option value="Contract">Contract</option>
 	  <option value="Permanent ATC">ATC Employee</option>
-	  <option value="Staff">Staff Other Than</option>
+	  <option value="Other">Other Than</option>
 	</select>
 </div>
 <div class="form-group">
-    <label for="name1">Superviser Name</label>
+    <label for="name1">Superviser Name&nbsp;<font color="red">*</font></label>
     <input type="text" class="form-control" name="superviser_name" id="name1" style="text-transform: capitalize;" placeholder="Superviser Name" required/>
 </div>
 <div class="form-group">
-    <label for="name1">Superviser Email Id</label>
-    <input type="email" class="form-control" name="superviser_emailid" id="name1" placeholder="Superviser Email Id" required/>
+    <label for="name1">Superviser Email Id&nbsp;<font color="red">*</font></label>
+    <input type="email" class="form-control" name="superviser_emailid" id="name1" placeholder="Superviser Email Id" pattern="[a-zA-Z]{3,}.+@americantower.com" title="Format of email id is name@americantower.com" required/>
 </div>
+<!-- <div class="form-group">
+    <label for="name1">Member City</label>
+    <input type="text" class="form-control" name="mcity" id="name1" style="text-transform: capitalize;" placeholder="City" />
+</div>
+<div class="form-group">
+    <label for="name1">Member Address</label>
+    <input type="text" class="form-control" name="maddress" id="name1" style="text-transform: capitalize;" placeholder="Address" />
+</div> -->
 <button type="submit" class="button">Submit</button>
 </form>
  </div>
@@ -160,7 +160,7 @@ catch(Exception e){
 <br>
 <br>
 <form method="post" name="form">
-<div class='container'>
+<div>
 <table class='table table-bordered table-striped' width="100%"  border="1" >
 <tr align="left"><th>ID</th><th>NAME</th><!-- <th>ADDRESS</th> --><th >CONTACT</th><th>EMAIL</th><th>EMP TYPE</th><th>SUPERVISOR NAME</th><th>SUPERVISOR EMAIL ID</th><th>ISSUED BOOKS</th><th>RETURNED BOOKS</th><th>PENDING BOOKS</th></tr>
 <%
@@ -207,7 +207,7 @@ function confirmComplete(id) {
 }
 </script>
 <td><input type="button" name="edit" value="Edit" style="background-color:green;font-weight:bold;color:white;" onclick="editRecord(<%=rs.getString(1)%>);"></td>
-<td><input type="button" name="delete" value="Delete" style="background-color:red;font-weight:bold;color:white;" onclick="{return confirmComplete(<%=rs.getString(1)%>);}"></td>
+<td><input type="button" name="delete" value="Mark As Deleted" style="background-color:red;font-weight:bold;color:white;" onclick="{return confirmComplete(<%=rs.getString(1)%>);}"></td>
 </tr>
 <%
 }

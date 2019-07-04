@@ -65,7 +65,7 @@ fw.append('\n');
 fw.flush();
 fw.close();
 conn.close();
-response.sendRedirect("../BookApplication/BookApplication.jsp");
+response.sendRedirect("../AdminBookApplication/BookApplication.jsp");
 } catch (Exception e) {
 e.printStackTrace();
 }

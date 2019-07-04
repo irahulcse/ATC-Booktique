@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../bootstrap.min.css'/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>ATC Library</title>
 <style type="text/css">body { background:  white !important; }
 .btn {
   background-color: DodgerBlue;

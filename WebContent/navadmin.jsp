@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ATC Library</title>
 <link rel="stylesheet" href="bootstrap.min.css"/>
 <style type="text/css">
 body { 
@@ -104,20 +104,20 @@ if(session.getAttribute("username")==null)
   <div align="center">
   <h3 align="centre"><b>ADMINISTRATIVE TASK</h3>
   <br>
-   <form action="LibApplication/LibApplication.jsp">
-   <button class="button" style="width:350px">LIBRARIAN PORTAL</style></button>
+   <form action="AdminLibApplication/LibApplication.jsp">
+   <button class="button" style="width:350px">LIBRARIAN</style></button>
 	</form>  
 	<br>
-	<form action="MemApplication/MemApplication.jsp">
-   <button class="button button4" style="width:350px">MEMBER PORTAL</button>
+	<form action="AdminMemApplication/MemApplication.jsp">
+   <button class="button button4" style="width:350px">MEMBER</button>
 	</form> 
 	<br>
-	<form action="BookApplication/BookApplication.jsp">
-   <button class="button button5" style="width:350px">BOOKS PORTAL</button>
+	<form action="AdminBookApplication/BookApplication.jsp">
+   <button class="button button5" style="width:350px">BOOKS</button>
 	</form> 
 	<br>
-	<form action="TransApplication/TransApplication.jsp">
- 	   <button class="button button3" style="width:360px">TRANSACTION PORTAL</button>
+	<form action="AdminTransApplication/TransApplication.jsp">
+ 	   <button class="button button3" style="width:360px">TRANSACTION</button>
 	</form> 
   </div>
 </div>

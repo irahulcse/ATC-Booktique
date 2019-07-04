@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ATC Library</title>
 <link rel="stylesheet" href="bootstrap.min.css"/>
 <style type="text/css">
 body { 

@@ -101,7 +101,7 @@ ResultSet rs = st.executeQuery(query);
 while(rs.next()){
 	count=rs.getInt(1);
 %>
-<input type="text" class="form-control" name="bookno" id="name1" placeholder="Employee Id" readonly value=<%="MYBOOK"%><%=count+1%> >
+<input type="text" class="form-control" name="bookno" id="name1" placeholder="Employee Id" readonly value=<%="BK"%><%=count+1%> >
 <%
 }
 %>
@@ -114,54 +114,55 @@ catch(Exception e){
 %>
 </div>
 <div class="form-group">
-    <label for="name1">BOOK NAME</label>
+    <label for="name1">Book Name&nbsp;<font color="red">*</font></label>
     <input type="text" class="form-control" name="bookname" id="name1" style="text-transform: capitalize;" placeholder="Book Name" required/>
 </div>
 <div class="form-group">
-    <label for="name1">Author</label>
+    <label for="name1">Author&nbsp;<font color="red">*</font></label>
     <input type="text" class="form-control" name="author" id="name1" style="text-transform: capitalize;" placeholder="Author Name" required/>
 </div>
 <div class="form-group">
-    <label for="name1">Publishers</label>
+    <label for="name1">Publishers&nbsp;<font color="red">*</font></label>
     <input type="text" class="form-control" name="publisher" id="name1" style="text-transform: capitalize;" placeholder="Publisher Name"  required/>
 </div>
 <div class="form-group">
-    <label for="name1">Publication_Year</label>
+    <label for="name1">Publication Year&nbsp;<font color="red">*</font></label>
     <input type="number" class="form-control" name="publication_year" id="name1" placeholder="Publication Year" pattern="[1-3]{1}[0-9]{3}" 
-       title="Publication Year's  First Digit should be 1-3 and Last Three should be from 1-9" required/>
+       title="Publication Year's  First Digit should be  1-3 and Last Three should be from 1 to 9" required/>
 </div>
 <div class="form-group">
-    <label for="name1">Language</label>
+    <label for="name1">Language&nbsp;<font color="red">*</font></label>
     <select  name="language" required>
 	  <option value="">Select Language Type</option>
 	  <option value="Hindi">Hindi</option>
 	  <option value="English">English</option>
-	  <option value="German">German</option>
+	   <option value="German">German</option>
+	  <option value="French">French</option>
 	</select>
 </div>
 <div class="form-group">
-    <label for="name1">Genre</label>
+    <label for="name1">Genre&nbsp;<font color="red">*</font></label>
     <!-- <input type="text" class="form-control" name="memtyp" id="name1" placeholder="Employee Type" required/> -->
 	<select  name="bcategoryid" required>
 	  <option value="">Genre Of Book</option>
-	  <option value="Religion ">Religion, Spirituality And New Age </option>
+	  <option value="Religious">Religious and Spiritual</option>
 	  <option value="Science">Science </option>
-	  <option value="Truecrime ">True crime </option>
+	  <option value="Coding ">Coding </option>
 	  <option value="Health">Health</option>
-	  <option value="Truecrime ">True crime </option>
+	  <option value="Science/Fiction ">Science/Fiction </option>
 	  <option value="Journal">Journal</option>
-	  <option value="Selfhelp">Self help</option>
-	  <option value="Math ">Math </option>
+	  <option value="Motivational">Motivational</option>
+	  <option value="Math ">Math</option>
 	</select>
 </div>
 <div class="form-group">
-    <label for="name1">Quantity On Hand</label>
-    <input type="number" class="form-control" name="qoh" id="name1" placeholder="Quantity On Hand" required/>
+    <label for="name1">Quantity On Hand&nbsp;<font color="red">*</font></label>
+    <input type="number" class="form-control" name="qoh" id="name1" placeholder="Quantity On Hand"  min="1" required/>
 </div>
 <div class="form-group">
-    <label for="name1">Book Price</label>
-    <input type="number" class="form-control" name="bookprice" id="name1" placeholder="Price Of Book In INR Only" required/>
-</div>
+    <label for="name1">Book Price&nbsp;<font color="red">*</font></label>
+    <input type="number" class="form-control" name="bookprice" id="name1" placeholder="Price Of Book In INR Only"  min="1" required/>
+</div>	
  <button type="submit" class="button">Submit</button>
 </form>
  </div>
