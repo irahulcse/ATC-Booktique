@@ -180,7 +180,7 @@ body {
     top: 75px;
     width: 100%;
     }
-   .perc-region {
+.perc-region {
     min-height: 0px !important;
 }
 </style>

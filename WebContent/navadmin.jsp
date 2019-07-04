@@ -105,11 +105,11 @@ if(session.getAttribute("username")==null)
   <h3 align="centre"><b>ADMINISTRATIVE TASK</h3>
   <br>
    <form action="AdminLibApplication/LibApplication.jsp">
-   <button class="button" style="width:350px">LIBRARIAN</style></button>
+   <button class="button" style="width:350px">LIBRARIANS</button>
 	</form>  
 	<br>
 	<form action="AdminMemApplication/MemApplication.jsp">
-   <button class="button button4" style="width:350px">MEMBER</button>
+   <button class="button button4" style="width:350px">MEMBERS</button>
 	</form> 
 	<br>
 	<form action="AdminBookApplication/BookApplication.jsp">
@@ -117,7 +117,7 @@ if(session.getAttribute("username")==null)
 	</form> 
 	<br>
 	<form action="AdminTransApplication/TransApplication.jsp">
- 	   <button class="button button3" style="width:360px">TRANSACTION</button>
+ 	   <button class="button button3" style="width:360px">TRANSACTIONS</button>
 	</form> 
   </div>
 </div>

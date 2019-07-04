@@ -1,4 +1,4 @@
-u<%@ page import="java.sql.*" %>
+<%@ page import="java.sql.*" %>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">

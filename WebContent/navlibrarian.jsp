@@ -106,15 +106,15 @@ if(session.getAttribute("libusername")==null)
   <br> 
 	<br>
 	<form action="LibrarianMemApplication/MemApplication.jsp">
-   <button class="button button4" style="width:350px">MEMBER PORTAL</button>
+   <button class="button button4" style="width:350px">MEMBERS</button>
 	</form> 
 	<br>
 	<form action="LibrarianBookApplication/BookApplication.jsp">
-   <button class="button button5" style="width:350px">BOOKS PORTAL</button>
+   <button class="button button5" style="width:350px">BOOKS</button>
 	</form> 
 	<br>
 	<form action="LibrarianTransApplication/TransApplication.jsp">
- 	   <button class="button button3" style="width:360px">TRANSACTION PORTAL</button>
+ 	   <button class="button button3" style="width:360px">TRANSACTIONS</button>
 	</form> 
   </div>
 </div>
