@@ -48,7 +48,7 @@ while(rs.next()){
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">EMP TYPE</label>
-    <input type="text" class="form-control" name="memptyp" value="<%=rs.getString(8)%>" disabled/>
+    <input type="text" class="form-control" name="memptyp" value="<%=rs.getString(8)%>" readonly/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">SUPERVISOR NAME</label>

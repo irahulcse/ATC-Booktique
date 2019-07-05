@@ -9,7 +9,7 @@
 	response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
 	response.setHeader("Pragma","no-cache");
 	response.setHeader("Expires","0");
-if(session.getAttribute("username")==null)
+if(session.getAttribute("libusername")==null)
 {
 	response.sendRedirect("../index.jsp");
 }
@@ -57,7 +57,11 @@ while(rs.next()){
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">LANGUAGE</label>
-    <input type="text" class="form-control" name="language" value="<%=rs.getString(7)%>"; disabled/>
+    <input type="text" class="form-control" name="language" value="<%=rs.getString(7)%>"; readonly/>
+</div>
+<div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
+    <label for="name1">GENRE OF BOOK</label>
+    <input type="text" class="form-control" name="language" value="<%=rs.getString(8)%>"; readonly/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">QOH</label>
