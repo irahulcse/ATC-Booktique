@@ -36,7 +36,7 @@ while(rs.next()){
 <br>
  <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1" text-align:center;>BOOK ID</label>
-    <input type="text" class="form-control" name="bookno" value="<%=rs.getString(2)%>" disabled/>
+    <input type="text" class="form-control" name="bookno" value="<%=rs.getString(2)%>" readonly/>
 </div>
 <div id="form-wrapper" style="max-width:500px;margin:auto; text-align: center;">
     <label for="name1">BOOK NAME</label>

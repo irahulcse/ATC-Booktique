@@ -163,7 +163,7 @@ if(session.getAttribute("username")==null)
 <form method="post" name="form">
 <div class='container'>
 <table class='table table-bordered table-striped' border="1">
-<tr><th>BOOK NO</th><th>BOOK NAME</th><th >AUTHOR</th><th >PUBLISHER</th><th>PUBLICATION YEAR</th><th>LANGUAGE</th><th>GENRE</th><th>ISBN NO</th><th>QUANTITY ON HAND</th><th>ISSUED QUANTITY</th></tr>
+<tr><th>BOOK NO</th><th>BOOK NAME</th><th >AUTHOR</th><th >PUBLISHER</th><th>PUBLICATION YEAR</th><th>LANGUAGE</th><th>GENRE</th><!-- <th>ISBN NO</th> --><th>QUANTITY ON HAND</th><th>ISSUED QUANTITY</th></tr>
 <%
 Connection con = null;
 String url = "jdbc:mysql://localhost:3306/";
@@ -190,7 +190,7 @@ while(rs.next()){
 <td><%=rs.getString(6)%></td>
 <td><%=rs.getString(7)%></td>
 <td><%=rs.getString(8)%></td>
-<td><%=rs.getString(9)%></td>
+<%-- <td><%=rs.getString(9)%></td> --%>  <!-- //not showing the isbno because null is yes in it -->
 <td><%=rs.getString(10)%></td>
 <td><%=rs.getString(11)%></td>
 <td><input type="button" name="delete" value="Issue Book" style="background-color:red;font-weight:bold;color:white;" onclick="deleteRecord(<%=rs.getString(1)%>);"></td>
