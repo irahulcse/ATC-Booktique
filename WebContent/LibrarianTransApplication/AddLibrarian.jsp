@@ -58,7 +58,9 @@ if(session.getAttribute("libusername")==null)
 <div style="float:right;width:40%" style="width:300px">
 <br>
 <br>
-<input type="text" name="bookno" class="form-control" placeholder="Search Employee By Details">
+<input type="text" id="uname" name="bookno" class="form-control" placeholder="Search Employee By Details" required size="27"
+           placeholder="Username"
+           minlength="7" maxlength="15"> <span class="validity"></span>
  <button type="submit" name="save" class="btn btn-primary">Search Employee</button>
 <!-- </form> -->
 </div>
