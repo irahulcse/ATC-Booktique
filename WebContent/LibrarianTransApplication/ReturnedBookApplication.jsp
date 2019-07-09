@@ -36,7 +36,7 @@ if(session.getAttribute("libusername")==null)
 %>
 <jsp:include page="Search.jsp" /> 
 <div style=" float:left;width:280px">
-<form name="TrainerMenu" action="../export/exportReturnTrans.jsp" method="post" onsubmit="greeting()"> 
+<form name="TrainerMenu" action="../exportLib/exportReturnTrans.jsp" method="post" onsubmit="greeting()"> 
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportReturnTrans.jsp')">DOWNLOAD AS CSV</button>
 </form>
 </div>

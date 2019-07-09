@@ -70,7 +70,7 @@ if(session.getAttribute("libusername")==null)
 &nbsp;&nbsp;<button id="myBtn" class="btn" style="float:right">ADD BOOKS</button>
 </div>
 <div style="float: right; width: 160px">
-<form name="TrainerMenu" action="/HelloJSP/export/exportBook.jsp" method="post" onsubmit="greeting()">
+<form name="TrainerMenu" action="/HelloJSP/exportLib/exportBook.jsp" method="post" onsubmit="greeting()">
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportBook.jsp')">&nbsp;&nbsp;DOWNLOAD AS CSV</button>
 </form>
 </div>

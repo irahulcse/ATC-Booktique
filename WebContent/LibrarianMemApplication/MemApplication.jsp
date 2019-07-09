@@ -49,15 +49,11 @@ if(session.getAttribute("libusername")==null)
 <button id="myBtn" class="btn" style="float:right">ADD </button>
 </div>
 <div style="float: right; width:200px">
-<form name="TrainerMenu" action="../export/exportMem.jsp" method="post" onsubmit="greeting()">
+<form name="TrainerMenu" action="../exportLib/exportMem.jsp" method="post" onsubmit="greeting()">
 <button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportMem.jsp')" >DOWNLOAD AS CSV</button>
 </form>
 </div>
 </div>
-
-
-
-
 
 <div id="myModal" class="modal">
 
