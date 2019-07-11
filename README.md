@@ -2,7 +2,7 @@
 
 > It is my internship project in which we have to manage the companies Library by adding the different modules like Librarian,Admin,Member(Employees) and Books through a interactive interface built in HTML/CSS/Javascript. The Portal is basically divided into 2 parts Admin Portal and Librarian Portal according to their rights and power to change the system.
 
-Librarian Login Portal and Admin Login Portal:
+Librarian Login Portal and Admin Login Portal:&nbsp;
 ![](screenshots/index.JPG)
 
 
@@ -28,6 +28,7 @@ Librarian Login Portal and Admin Login Portal:
    
  + [Development](#development)
  + [Contribute](#contribute)
+ + [Technology Stack Used](##technoogy used)
  + [Setup](#setup)
  + [Features](#features)
  + [Screenshots](#screenshots)
@@ -40,6 +41,25 @@ The front end is built on **[JSP](https://www.javatpoint.com/)**, you can refer 
 ## Contribute
 + For reporting bug about an incorrect file not being processed, open a new issue.
 + PRs are always welcome to improve exisiting system and documentation too.
+
+### Default Login Credentials For Admin
+| Username  | Password |
+| ------------- | ------------- |
+| raja  | rahul  |
+
+### Default Login Credentials For Librarian
+| Username  | Password |
+| ------------- | ------------- |
+| LIB001  | rahul  |
+
+
+### Technology Used
+  * [JSP](https://github.com/jfoenixadmin/JFoenix) - JSP For Creating JDBC Driver Link and Fetching/Updating Records
+  * [Ajax](https://db.apache.org/derby/) - Dynamic Searching For Filtering Records
+  * [Servelet](https://commons.apache.org/) - For creating SHA hash
+  * [JSON](https://github.com/google/gson) - JSON Library, for storing configurations
+  * [Google API's](https://bitbucket.org/Jerady/fontawesomefx) - For Creating Dynamic Reports at Server Side
+
 
 ## Setup
 
@@ -122,6 +142,7 @@ And your Tables in the lib Database will look like this:
  + We would be able to generate the dynamic reports through **Google API's and JSON** which would help the authority to find different important information System about the Librarian.
  + **Login and Logout Functionaly with Session Maintanence is taken with the help of Servlet**.
  + Admin and Librarian could change the password for the security purpose after every 10 days.
+
 
 
 ## Screenshots
