@@ -21,7 +21,6 @@
    
  + [Development](#development)
  + [Contribute](#contribute)
- + [Technology Stack Used](##technology used)
  + [Setup](#setup)
  + [Features](#features)
  + [Screenshots](#screenshots)
