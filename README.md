@@ -4,7 +4,7 @@
 
 Librarian Login Portal and Admin Login Portal:
 <p align="center">
-	![](screenshots/index.JPG)
+	![alt text](screenshots/index.JPG)
 </p>
 
 
