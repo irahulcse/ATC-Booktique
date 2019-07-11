@@ -9,21 +9,13 @@
 
 ### Advanced Features  Implemented :
 * One-click database export in CSV format:
-  <p align="center">
-   <img src=https://i.imgur.com/ufZOqkn.png>
-  </p>
-* Session Management(to reduce illegal access to any files and folders):
-  <p align="center">
-   <img src=https://i.imgur.com/7UutZZQ.png>
-  </p>
+![](screenshots/memapplication.JPG)
+![](screenshots/exportbook.JPG)
+* Session Management(to reduce illegal access to any files and folders)
 * Dynamic Modal Box using Bootstrap for ADD modules.
-   <p align="center">
-    <img src=https://i.imgur.com/jj9Lk5G.png>
-   </p>
+![](screenshots/addbook.JPG)
 * Search Panel For Dynamic Searching:   
-   <p align="center">
-    <img src=https://i.imgur.com/WrWZqLr.png>
-   </p>
+![](screenshots/booksearch.JPG)
    
    
  + [Development](#development)
@@ -83,7 +75,8 @@ The front end is built on **[JSP](https://www.javatpoint.com/)**, you can refer 
 *Your Eclipse Project Directory will look like this after the required dependecny are installed:*
 ![](meta/screencapture-library-local-1450375427449.png)
 
-** Overview Of MYSQL Command Client with Tables Inserted**
+#### Overview Of MYSQL Command Client with Tables Inserted
+![](https://github.com/irahulcse/ATC/blob/master/screenshots/mysqlprojectables.JPG)
 
 
 * My MYSQL root password is rahul.**
@@ -119,18 +112,19 @@ With the above notes in mind, Eclipse setup is not too tricky:
 
 * Now you  need to add the required  Tomcat Server Jar Files and MySQL Jar file in the project directory for running the project. 
 
-Finally the Eclipse Directory will look like this:
+#### Finally the Eclipse Directory will look like this:</br>
+![](screenshots/eclipseprojectdirectory.JPG)
 
 * **NOTE:** Now you have to create the database first(My Project database name is lib) and after of database creation, you need to import the different tables in the database lib:
 
 * Below is the command to import the tables in the mysql command line client without any hassle:
 
-* **NOTE:** mem.sql is the table for the member table present in the git folder:
+* **NOTE:** mem.sql is the table for the books table present in the git folder:
 
-* `source C:\Users\Rahul Chandra\Downloads\eclipse\eclipse-workspace-new\HelloJSP\mem.sql`
-
-And your Tables in the lib Database will look like this:
-
+* `source C:\Users\Rahul Chandra\Downloads\eclipse\eclipse-workspace-new\HelloJSP\books.sql`
+* Do the same for the mem,trans,librarian and admin table present in the directory.
+#### And your Tables in the lib Database will look like this:
+![](screenshots/mysqlprojectables.JPG)
 
 ## Features
  + Admins and Librarians can be given their authorized login ID and password without which the system can not be accessed and all the sessions are maintained through that same Id and Password.
@@ -146,11 +140,31 @@ And your Tables in the lib Database will look like this:
 
 
 ## Screenshots
-hi
-<p align="center">
-  ![](meta/screencapture-library-local-1450375427449.png)
-</p>
-hello
-<p align="center">	
-  ![](meta/screencapture-library-local-1450375427449.png)
-</p>
+#### Admin Panel(After Login):
+![](screenshots/adminpanel.JPG)
+
+#### Book Section:
+![](screenshots/bookpanel.JPG)
+
+#### Bootstrap based Add Book Pop Up:
+
+#### Delete Book Confirmation Box:
+![](screenshots/deletemessage.JPG)
+#### Member Section:
+![](screenshots/memapplication.JPG)
+#### Update Member Details:
+![](screenshots/memedit.JPG)
+#### Issued Book Section:
+![](screenshots/mempanel.JPG)
+#### Search Book Section/ Issue Book Confirmation:
+![](screenshots/issuebook.JPG)
+#### Search Employee Section:
+![](screenshots/searchemployee.JPG)
+#### Returned Book Section(Already Returned Book):
+![](screenshots/returnedbookapplication.JPG)
+#### Forget/Reset Admin and Librarian Password:
+![](screenshots/forgetpasswordadmin.JPG)
+
+#### Exported Records in Local System:
+![](screenshots/exportddata.JPG)
+![](screenshots/exportbook.JPG)
