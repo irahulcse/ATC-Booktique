@@ -21,7 +21,7 @@
    
  + [Development](#development)
  + [Contribute](#contribute)
- + [Technology Stack Used](##technoogy used)
+ + [Technology Stack Used](##technology used)
  + [Setup](#setup)
  + [Features](#features)
  + [Screenshots](#screenshots)
@@ -33,7 +33,7 @@ The front end is built on **[JSP](https://www.javatpoint.com/)**, you can refer 
 
 ## Contribute
 + For reporting bug about an incorrect file not being processed, open a new issue.
-+ PRs are always welcome to improve exisiting system and documentation too.
++ PRs are always welcome to improve exisiting system and documentation too.:thumbsup:
 
 ### Default Login Credentials For Admin
 | Username  | Password |
