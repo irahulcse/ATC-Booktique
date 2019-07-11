@@ -4,7 +4,7 @@
 
 Librarian Login Portal and Admin Login Portal:
 <p align="center">
-	![](meta/screencapture-library-local-1450375427449.png)
+	![](https://github.com/irahulcse/ATC/blob/master/screenshots/index.JPG)
 </p>
 
 
