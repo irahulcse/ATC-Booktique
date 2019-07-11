@@ -8,13 +8,14 @@
 
 
 ### Advanced Features  Implemented :
-* One-click database export in CSV format:
+#### One-click database export in CSV format:
 ![](screenshots/memapplication.JPG)
+#######
 ![](screenshots/exportbook.JPG)
-* Session Management(to reduce illegal access to any files and folders)
-* Dynamic Modal Box using Bootstrap for ADD modules.
+#### Session Management(to reduce illegal access to any files and folders)
+#### Dynamic Modal Box using Bootstrap for ADD modules.
 ![](screenshots/addbook.JPG)
-* Search Panel For Dynamic Searching:   
+#### Search Panel For Dynamic Searching:   
 ![](screenshots/booksearch.JPG)
    
    
@@ -46,11 +47,11 @@ The front end is built on **[JSP](https://www.javatpoint.com/)**, you can refer 
 
 
 ### Technology Used
-  * [JSP](https://github.com/jfoenixadmin/JFoenix) - JSP For Creating JDBC Driver Link and Fetching/Updating Records
-  * [Ajax](https://db.apache.org/derby/) - Dynamic Searching For Filtering Records
-  * [Servelet](https://commons.apache.org/) - For creating SHA hash
-  * [JSON](https://github.com/google/gson) - JSON Library, for storing configurations
-  * [Google API's](https://bitbucket.org/Jerady/fontawesomefx) - For Creating Dynamic Reports at Server Side
+  * [JSP](https://www.tutorialspoint.com/jsp/) - JSP For Creating JDBC Driver Link and Fetching/Updating Records
+  * [Ajax](https://www.w3schools.com/xml/ajax_intro.asp) - Dynamic Searching For Filtering Records
+  * [Servelet](https://www.youtube.com/watch?v=gQLQ0t9B5yk) - For creating Session Management and Checking Session In Each Page
+  * [JSON](https://www.w3schools.com/whatis/whatis_json.asp) - JSON Library, for storing configurations
+  * [Google Chart API's](https://developers.google.com/chart/) - For Creating Dynamic Reports at Server Side
 
 
 ## Setup
@@ -153,7 +154,7 @@ With the above notes in mind, Eclipse setup is not too tricky:
 #### Member Section:
 ![](screenshots/memapplication.JPG)
 #### Update Member Details:
-![](screenshots/memedit.JPG)
+![](screenshots/memedit.png)
 #### Issued Book Section:
 ![](screenshots/mempanel.JPG)
 #### Search Book Section/ Issue Book Confirmation:
@@ -166,5 +167,5 @@ With the above notes in mind, Eclipse setup is not too tricky:
 ![](screenshots/forgetpasswordadmin.JPG)
 
 #### Exported Records in Local System:
-![](screenshots/exportddata.JPG)
+![](screenshots/exportdata.JPG)
 ![](screenshots/exportbook.JPG)
