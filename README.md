@@ -31,7 +31,7 @@ Librarian Login Portal and Admin Login Portal:
  + [Contribute](#contribute)
  + [Setup](#setup)
  + [Features](#features)
- + [Screenshots](meta/README.md)
+ + [Screenshots](#screenshots)
 
 ## Development
 The backend of the system is developed on **[MySQL Command Line Client/MySQL Workbench](https://www.mysql.com/)** and it is free and open source. You just need to download the jar file and import it to the **Eclipse Ide** in the directory of the Project. I generally prefer the Command Line Client than Workbench, as it would help you to be proficient in learning SQL.:boom::smiley:
@@ -118,13 +118,14 @@ And your Tables in the lib Database will look like this:
  + Admin is more of the supreme or you can say a Senior Vice President Person who commands and monitors the progress.
  + Librarian's can access only the his portal with funcationalities related to the Members(Employees), Book, Transactions.
  + Admin and Librarian's can download/export the database in One-click in their own system.
+ + Admin and Librarian can **Update** data and **Mark As Deleted**(i.e flag the data in table from n to y/ One of the **important** feature used in the Companies at big level).As no data is ever deleted it just **Mark As Deleted**.
  + We could be only able to issue the book to not more than 2 books to any Employee at one time.
  + We would be able to generate the dynamic reports through **Google API's and JSON** which would help the authority to find different important information System about the Librarian.
  + **Login and Logout Functionaly with Session Maintanence is taken with the help of Servlet**.
  + Admin and Librarian could change the password for the security purpose after every 10 days.
 
 
-## Scrrenshots
+## Screenshots
 hi
 <p align="center">
   ![](meta/screencapture-library-local-1450375427449.png)

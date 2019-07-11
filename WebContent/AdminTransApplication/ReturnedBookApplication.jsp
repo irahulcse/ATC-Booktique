@@ -41,7 +41,7 @@ if(session.getAttribute("username")==null)
 </form>
 </div>
 <br>
-<h3 align="center"><strong>Issued Details Panel</strong></h3>
+<h3 align="center"><strong>RETURNED BOOK DETAILS PANEL</strong></h3>
 <form method="post" name="form" onsubmit="greeting()">
 <div class='container'>
 <table class='table table-bordered table-striped' border="1">
