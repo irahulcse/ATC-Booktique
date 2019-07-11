@@ -8,8 +8,9 @@
 
 
 ### Advanced Features  Implemented :
-#### One-click database export in CSV format:
-![](screenshots/memapplication.JPG)
+#### One-click database export(Through Download As CSV button):
+![](screenshots/bookpanel.JPG)
+##### Getting the data from the Web to Local C::directory/csv:
 ![](screenshots/exportbook.JPG)
 #### Session Management(to reduce illegal access to any files and folders)
 #### Dynamic Modal Box using Bootstrap for ADD modules.
@@ -147,7 +148,7 @@ With the above notes in mind, Eclipse setup is not too tricky:
 ![](screenshots/bookpanel.JPG)
 
 #### Bootstrap based Add Book Pop Up:
-
+![](screenshots/addbook.JPG)
 #### Delete Book Confirmation Box:
 ![](screenshots/deletemessage.JPG)
 #### Member Section:
