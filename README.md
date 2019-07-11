@@ -169,3 +169,8 @@ With the above notes in mind, Eclipse setup is not too tricky:
 #### Exported Records in Local System:
 ![](screenshots/exportdata.JPG)
 ![](screenshots/exportbook.JPG)
+
+## Further Improvements:
+* Email Integeration could be done when the book return date is day after tomorrow.
+* OTP based Password Reset for Admin and Password to bring more security in the system.
+* Create more dynamic charts/plot for generation of the reports like Pie Chart,Bar Chart and Histogram so that user will be able to get more insights and depth knowledge about the data.
