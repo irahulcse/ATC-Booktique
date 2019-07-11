@@ -1,4 +1,4 @@
-# ATC Booktique (Library Management System using JSP)
+# ATC Booktique (Library Management System using JSP):books:
 
 > It is my internship project in which we have to manage the companies Library by adding the different modules like Librarian,Admin,Member(Employees) and Books through a interactive interface built in HTML/CSS/Javascript. The Portal is basically divided into 2 parts Admin Portal and Librarian Portal according to their rights and power to change the system.
 
