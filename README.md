@@ -10,7 +10,6 @@
 ### Advanced Features  Implemented :
 #### One-click database export in CSV format:
 ![](screenshots/memapplication.JPG)
-#######
 ![](screenshots/exportbook.JPG)
 #### Session Management(to reduce illegal access to any files and folders)
 #### Dynamic Modal Box using Bootstrap for ADD modules.
@@ -152,11 +151,11 @@ With the above notes in mind, Eclipse setup is not too tricky:
 #### Delete Book Confirmation Box:
 ![](screenshots/deletemessage.JPG)
 #### Member Section:
-![](screenshots/memapplication.JPG)
+![](screenshots/mempanel.JPG)
 #### Update Member Details:
 ![](screenshots/memedit.png)
 #### Issued Book Section:
-![](screenshots/mempanel.JPG)
+![](screenshots/memapplication.JPG)
 #### Search Book Section/ Issue Book Confirmation:
 ![](screenshots/issuebook.JPG)
 #### Search Employee Section:
