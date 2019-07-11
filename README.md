@@ -1,6 +1,6 @@
 # ATC Booktique (Library Management System using JSP):books:
 
-> It is my internship project in which we have to manage the companies Library by adding the different modules like Librarian,Admin,Member(Employees) and Books through a interactive interface built in HTML/CSS/Javascript. The Portal is basically divided into 2 parts Admin Portal and Librarian Portal according to their rights and power to change the system.
+> It is my sophomore year project in which we have to manage the companies Library by adding the different modules like Librarian,Admin,Member(Employees) and Books through a interactive interface built in HTML/CSS/Javascript. The Portal is basically divided into 2 parts Admin Portal and Librarian Portal according to their rights and power to change the system.
 
 #### Librarian Login Portal and Admin Login Portal:
 ![](screenshots/index.JPG)
@@ -173,4 +173,4 @@ With the above notes in mind, Eclipse setup is not too tricky:
 ## Further Improvements:
 * Email Integeration could be done when the book return date is day after tomorrow.
 * OTP based Password Reset for Admin and Password to bring more security in the system.
-* Create more dynamic charts/plot for generation of the reports like Pie Chart,Bar Chart and Histogram so that user will be able to get more insights and depth knowledge about the data.
+* Create more dynamic charts/plot for generation of the reports like Pie Chart,Bar Chart and Histogram so that user will be able to get more insights and depth knowledge about the data.:smiley:
