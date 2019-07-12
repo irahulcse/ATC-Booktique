@@ -152,9 +152,9 @@ With the above notes in mind, Eclipse setup is not too tricky:
 ![](screenshots/deletemessage.JPG)
 #### Member Section:
 ![](screenshots/mempanel.JPG)
-#### Update Member Details:
+#### Update Member Details within the defined constraints as shown below:
 ![](screenshots/memedit.png)
-#### Issued Book Section:
+#### Already Issued Book Section:
 ![](screenshots/memapplication.JPG)
 #### Search Book Section/ Issue Book Confirmation:
 ![](screenshots/issuebook.JPG)
@@ -164,7 +164,6 @@ With the above notes in mind, Eclipse setup is not too tricky:
 ![](screenshots/returnedbookapplication.JPG)
 #### Forget/Reset Admin and Librarian Password:
 ![](screenshots/forgetpasswordadmin.JPG)
-
 #### Exported Records in Local System:
 ![](screenshots/exportdata.JPG)
 ![](screenshots/exportbook.JPG)
