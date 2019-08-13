@@ -1,0 +1,87 @@
+background 
+objective  //why we had started this
+intern objective
+company objective
+area of improvement
+outcomes
+system analysis //study meeting the mentors/members/management
+problem analysis
+purpose
+
+system design planning UI based/secure/portable/code reusability/robust
+tool primary identified
+tools selected finally
+dfd 0 
+dfd 1
+problems
+
+
+
+approach/solution
+flow chart
+all modules and entities
+
+
+how to fulfill the need 
+objective
+system analysis
+tool selection background
+database local
+secure
+
+technology used
+then we will be going to show the designe
+
+system prototype (week wise planning was referred)
+designing of table
+system designing
+table designing (detailed table is attached)
+data type 
+
+coding
+module
+entities
+libraries
+
+
+procedures
+
+
+testing/troubleshooting
+remedies (how did we solved it)
+
+
+
+system maintanence
+
+indexing
+
+
+no booktique(library management system)
+
+
+
+backup plan regarding the database
+
+
+#focus on the project and how you had worked on the project
+
+user manual 
+screenshots
+
+
+
+tell all the object of the JSP
+
+
+
+
+objective
+scope of the prjoect
+
+methodoloy
+	planning
+	requirement analysis
+	software requirements
+	implementation
+	troubleshooting
