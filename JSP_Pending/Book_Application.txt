@@ -1,0 +1,60 @@
+<div class="container" align="right">
+<form id="form1" name="form1" method="post" class="form-inline">
+<input type="text" class="form-control" placeholder= 'Search by rollno...' id="roll_no">
+ <button type="submit"  class="btn btn-primary" id="search">Search Book </button>
+ <table class='table table-bordered table-striped' border="1">
+<tr><th>BOOK NO</th><th>BOOK NAME</th><th >AUTHOR</th><th>LANGUAGE</th><th>Genre</th></tr>
+<tr><td><input type="email" class="form-control" placeholder='Book No' id="book_no" size="10"></td>
+<%
+String driver1= "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:mysql://localhost:3306/";
+String database = "lib";
+String userid = "rahul";
+String password1 = "pass";
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+try{
+Class.forName(driver1);
+String book_no=request.getParameter("book_no");
+connection = DriverManager.getConnection(connectionUrl+database, userid, password1);
+statement=connection.createStatement();
+String sql ="select bookno, bookname from books where bookno='"+book_no+"' and bdeleted='n'";
+resultSet = statement.executeQuery(sql);
+int i=0;
+while(resultSet.next()){ 
+%>
+<td><input type="email"   id="book_name" placeholder="Employee Id"  value=<%=resultSet.getString("bookname")%> ></td>
+<% 
+}
+connection.close();
+} catch (Exception e) {
+e.printStackTrace();
+}
+%> 
+</tr>
+</table>
+</form>
+</div>
+<script>
+$("#search").click(function() {
+var roll_no= $('#roll_no').val();
+book_no.value = book_no;
+/* book_name.value=book_name; */
+$.ajax({
+url: "SearchBook.jsp",
+type: 'POST',
+data: {roll_no: roll_no},
+success: function(data) {
+$('#book_no').val(data);
+/* alert(data); */
+var book_no = data;
+},
+/* success: function(data1) {
+	$('#book_name').val(data1);
+	var book_name = data1;
+}, */
+});
+});
+</script>
+
