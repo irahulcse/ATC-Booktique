@@ -32,7 +32,7 @@ The front end is built on **[JSP](https://www.javatpoint.com/)**, you can refer 
 
 ## Contribute
 + For reporting bug about an incorrect file not being processed, open a new issue.
-+ PRs are always welcome to improve exisiting system and documentation too.:thumbsup:
++ PRs are always welcome to improve existing system and documentation too.:thumbsup:
 
 ### Default Login Credentials For Admin
 | Username  | Password |
@@ -60,7 +60,7 @@ The front end is built on **[JSP](https://www.javatpoint.com/)**, you can refer 
 > If you don't already have the MySQL Database Server(My MySQL Server Version 5.5) installed, you will need to install it to use this project. If it is installed, you can skip to step 4.
 
 1. Oracle provides detailed instructions to install MySQL on any Linux distribution. See ["Installing MySQL on Linux"](https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html) for details and instructions. 
-2. Altneratively, you can probably install a working MySQL server that is compatible with this project by running:
+2. Alternatively, you can probably install a working MySQL server that is compatible with this project by running:
 
 `apt-get update && apt-get install mysql-server`
 
@@ -108,9 +108,9 @@ With the above notes in mind, Eclipse setup is not too tricky:
 
 * `cd ATC`;
 
-* You need to import the project(Open Project from File System) in the eclipse directly.
+* You need to import the project (Open Project from File System) in the eclipse directly.
 
-* Now you  need to add the required  Tomcat Server Jar Files and MySQL Jar file in the project directory for running the project. 
+* Now you  need to add the required Tomcat Server Jar Files and MySQL Jar file in the project directory for running the project. 
 
 #### Finally the Eclipse Directory will look like this:</br>
 ![](screenshots/eclipseprojectdirectory.JPG)
@@ -122,16 +122,16 @@ With the above notes in mind, Eclipse setup is not too tricky:
 * **NOTE:** mem.sql is the table for the books table present in the git folder:
 
 * `source C:\Users\Rahul Chandra\Downloads\eclipse\eclipse-workspace-new\HelloJSP\books.sql`
-* Do the same for the mem,trans,librarian and admin table present in the directory.
+* Do the same for the mem, trans, librarian and admin table present in the directory.
 #### And your Tables in the lib Database will look like this:
 ![](screenshots/mysqlprojectables.JPG)
 
 ## Features
  + Admins and Librarians can be given their authorized login ID and password without which the system can not be accessed and all the sessions are maintained through that same Id and Password.
  + Admin is more of the supreme or you can say a Senior Vice President Person who commands and monitors the progress.
- + Librarian's can access only the his portal with funcationalities related to the Members(Employees), Book, Transactions.
+ + Librarian's can access only the his portal with functionalities related to the Members(Employees), Book, Transactions.
  + Admin and Librarian's can download/export the database in One-click in their own system.
- + Admin and Librarian can **Update** data and **Mark As Deleted**(i.e flag the data in table from n to y/ One of the **important** feature used in the Companies at big level).As no data is ever deleted it just **Mark As Deleted**.
+ + Admin and Librarian can **Update** data and **Mark As Deleted**(i.e flag the data in table from n to y/ One of the **important** feature used in the Companies at big level). As no data is ever deleted it just **Mark As Deleted**.
  + We could be only able to issue the book to not more than 2 books to any Employee at one time.
  + We would be able to generate the dynamic reports through **Google API's and JSON** which would help the authority to find different important information System about the Librarian.
  + **Login and Logout Functionaly with Session Maintanence is taken with the help of Servlet**.
