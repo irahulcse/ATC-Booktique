@@ -1,6 +1,6 @@
 # ATC Booktique (Library Management System using JSP):books:
 
-> It is my sophomore year project in which we have to manage the companies Library by adding the different modules like Librarian,Admin,Member(Employees) and Books through a interactive interface built in HTML/CSS/Javascript. The Portal is basically divided into 2 parts Admin Portal and Librarian Portal according to their rights and power to change the system.
+> It is my sophomore year project in which we have to manage the companies Library by adding the different modules like Librarian, Admin, Member (Employees) and Books through a interactive interface built in HTML/CSS/Javascript. The Portal is basically divided into 2 parts Admin Portal and Librarian Portal according to their rights and power to change the system.
 
 #### Librarian Login Portal and Admin Login Portal:
 ![](screenshots/index.JPG)
@@ -72,7 +72,7 @@ The front end is built on **[JSP](https://www.javatpoint.com/)**, you can refer 
 
 *NOTE:* Tomcat Server Version 8.0 or above,MySQL Server Version 5.5 or above and Eclipse Ide For Java EE Developers:
 
-*Your Eclipse Project Directory will look like this after the required dependecny are installed:*
+*Your Eclipse Project Directory will look like this after the required dependency are installed:*
 ![](meta/screencapture-library-local-1450375427449.png)
 
 #### Overview Of MYSQL Command Client with Tables Inserted
